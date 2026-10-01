@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Pharenda | Anand Nagar</title>
+    <meta name="description"
+          content="Explore temples, heritage, and places around Pharenda and Anand Nagar, Maharajganj, Uttar Pradesh.">
+
+    <!-- Shared site stylesheet: header, navigation, footer, buttons, etc. -->
+   <link rel="stylesheet" href="../CSS/style.css">
+   <link rel="stylesheet" href="../CSS/events.css">
+
+    <!-- Fonts used by the main site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <!-- Same header structure as the Home page -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+</a>
+
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+<nav class="main-navigation" id="mainNavigation">
+    <a href="index.html"
+       class="nav-link"
+       data-i18n="navHome">
+        Home
+    </a>
+
+    <a href="about.html"
+       class="nav-link"
+       data-i18n="navAbout">
+        About
+    </a>
+
+    <a href="explore.html"
+       class="nav-link"
+       data-i18n="navExplore">
+        Explore
+    </a>
+
+    <!-- Active navigation item for Events page -->
+    <a href="events.html"
+       class="nav-link active"
+       aria-current="page"
+       data-i18n="navEvents">
+        Events
+    </a>
+
+    <a href="directory.html"
+       class="nav-link"
+       data-i18n="navDirectory">
+        Directory
+    </a>
+
+    <a href="transport.html"
+       class="nav-link"
+       data-i18n="navTransport">
+        Transport
+    </a>
+
+    <a href="news.html"
+       class="nav-link"
+       data-i18n="navUpdates">
+        Updates
+    </a>
+
+    <a href="contact.html"
+       class="nav-link"
+       data-i18n="navContact">
+        Contact
+    </a>
+</nav>
+
+            <button class="language-button"
+                    id="languageButton"
+                    type="button"
+                    aria-label="Switch language">
+                हिन्दी
+            </button>
+
+        </div>
+    </header>
+
+
+
+<main class="events-page">
+
+    <!-- Events Hero -->
+    <section class="events-hero">
+        <div class="events-hero-content">
+            <span class="events-eyebrow"
+                  data-en="WHAT'S HAPPENING"
+                  data-hi="क्या हो रहा है">
+                WHAT'S HAPPENING
+            </span>
+
+            <h1 data-en="Events in Anand Nagar"
+                data-hi="आनंद नगर के आयोजन">
+                Events in Anand Nagar
+            </h1>
+
+            <p data-en="Discover local celebrations, cultural traditions, and community activities around Anand Nagar and Pharenda."
+               data-hi="आनंद नगर और फरेंदा के आसपास स्थानीय उत्सवों, सांस्कृतिक परंपराओं और सामुदायिक गतिविधियों के बारे में जानें।">
+                Discover local celebrations, cultural traditions, and community activities around Anand Nagar and Pharenda.
+            </p>
+        </div>
+    </section>
+
+    <!-- Event filters -->
+    <section class="events-main">
+        <div class="events-section-heading">
+            <span class="events-eyebrow"
+                  data-en="LOCAL HIGHLIGHTS"
+                  data-hi="स्थानीय झलकियाँ">
+                LOCAL HIGHLIGHTS
+            </span>
+
+            <h2 data-en="Explore Events & Celebrations"
+                data-hi="आयोजन और उत्सव देखें">
+                Explore Events & Celebrations
+            </h2>
+
+            <p data-en="Browse reported celebrations, seasonal observances, and community initiatives. Dates for local events should be confirmed with organizers."
+               data-hi="रिपोर्ट किए गए उत्सवों, मौसमी पर्वों और सामुदायिक पहलों को देखें। स्थानीय आयोजनों की तारीख आयोजकों से अवश्य पुष्टि करें।">
+                Browse reported celebrations, seasonal observances, and community initiatives. Dates for local events should be confirmed with organizers.
+            </p>
+        </div>
+
+        <div class="event-filters" role="group" aria-label="Filter events">
+            <button class="event-filter active"
+                    type="button"
+                    data-filter="all"
+                    aria-pressed="true"
+                    data-en="All"
+                    data-hi="सभी">
+                All
+            </button>
+
+            <button class="event-filter"
+                    type="button"
+                    data-filter="festival"
+                    aria-pressed="false"
+                    data-en="Festivals"
+                    data-hi="त्योहार">
+                Festivals
+            </button>
+
+            <button class="event-filter"
+                    type="button"
+                    data-filter="community"
+                    aria-pressed="false"
+                    data-en="Community"
+                    data-hi="समुदाय">
+                Community
+            </button>
+
+            <button class="event-filter"
+                    type="button"
+                    data-filter="seasonal"
+                    aria-pressed="false"
+                    data-en="Seasonal"
+                    data-hi="मौसमी">
+                Seasonal
+            </button>
+        </div>
+
+        <div class="events-grid" id="eventsGrid">
+
+            <!-- Reported local celebration -->
+           <!-- Event Card: Ganeshotsav in Pharenda -->
+<article class="event-card" data-category="festival">
+
+    <!-- Event Image Section: Replace the image path with your actual image filename -->
+    <div class="event-card-image ganesh-event-image">
+
+        <!-- ADD IMAGE HERE: Place the Ganeshotsav image inside the Images folder -->
+        <img src="../Images/Vibrant Ganeshotsav Festival Celebration.png"
+             alt="Ganeshotsav celebration at a decorated pandal in Pharenda"
+             class="event-image">
+
+        <!-- Image Category Label -->
+        <span class="event-category"
+              data-en="LOCAL FESTIVAL"
+              data-hi="स्थानीय उत्सव">
+            LOCAL FESTIVAL
+        </span>
+
+    </div>
+
+    <!-- Event Details -->
+    <div class="event-card-content">
+
+        <div class="event-meta">
+            <span data-en="Reported September 2026"
+                  data-hi="सितंबर 2026 की रिपोर्ट">
+                Reported September 2026
+            </span>
+
+            <span class="event-status"
+                  data-en="Past event"
+                  data-hi="पिछला आयोजन">
+                Past event
+            </span>
+        </div>
+
+        <h3 data-en="Ganeshotsav in Pharenda"
+            data-hi="फरेंदा में गणेशोत्सव">
+            Ganeshotsav in Pharenda
+        </h3>
+
+        <p data-en="A local news report described the beginning of Ganeshotsav in Pharenda, including the installation of a Ganesh idol in a decorated pandal and devotees gathering for darshan."
+           data-hi="एक स्थानीय समाचार रिपोर्ट में फरेंदा में गणेशोत्सव की शुरुआत, सजाए गए पंडाल में गणेश प्रतिमा की स्थापना और दर्शन के लिए श्रद्धालुओं के जुटने का उल्लेख है।">
+            A local news report described the beginning of Ganeshotsav in Pharenda, including the installation of a Ganesh idol in a decorated pandal and devotees gathering for darshan.
+        </p>
+
+        <a href="https://hindi.dynamitenews.com/uttar-pradesh/pharenda-maharajganj-ganeshotsav-ganpati-bappa-installation-festival-celebration"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="event-link"
+           data-en="Read Event Report ↗"
+           data-hi="आयोजन की रिपोर्ट पढ़ें ↗">
+            Read Event Report ↗
+        </a>
+
+    </div>
+</article>
+
+            <!-- Community initiatives -->
+            <!-- Event Card: Community Cleanliness Drive -->
+<article class="event-card" data-category="community">
+
+    <!-- Event Image Section -->
+    <div class="event-card-image community-event-image">
+
+        <!-- ADD IMAGE: Anand Nagar Community Cleanup Drive -->
+        <img src="../Images/Anand Nagar Community Cleanup Drive.png"
+             alt="Community volunteers participating in a cleanliness drive in Anand Nagar"
+             class="event-image">
+
+        <!-- Image Category Label -->
+        <span class="event-category"
+              data-en="COMMUNITY INITIATIVE"
+              data-hi="सामुदायिक पहल">
+            COMMUNITY INITIATIVE
+        </span>
+
+    </div>
+
+    <!-- Event Details -->
+    <div class="event-card-content">
+
+        <div class="event-meta">
+            <span data-en="Nagar Panchayat Gallery"
+                  data-hi="नगर पंचायत गैलरी">
+                Nagar Panchayat Gallery
+            </span>
+
+            <span class="event-status event-status-info"
+                  data-en="No date published"
+                  data-hi="तारीख प्रकाशित नहीं">
+                No date published
+            </span>
+        </div>
+
+        <h3 data-en="Community Cleanliness Drive"
+            data-hi="सामुदायिक स्वच्छता अभियान">
+            Community Cleanliness Drive
+        </h3>
+
+        <p data-en="The Anandnagar Nagar Panchayat gallery highlights community participation in cleanliness, sanitation, and public-awareness activities. Check with the Nagar Panchayat for current or upcoming drives."
+           data-hi="आनंदनगर नगर पंचायत की गैलरी में स्वच्छता, साफ-सफाई और जन-जागरूकता गतिविधियों में सामुदायिक भागीदारी दिखाई गई है। आगामी अभियानों की जानकारी नगर पंचायत से प्राप्त करें।">
+            The Anandnagar Nagar Panchayat gallery highlights community participation in cleanliness, sanitation, and public-awareness activities. Check with the Nagar Panchayat for current or upcoming drives.
+        </p>
+
+        <a href="https://www.npanandnagar.org/gallery"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="event-link"
+           data-en="View Nagar Panchayat Gallery ↗"
+           data-hi="नगर पंचायत गैलरी देखें ↗">
+            View Nagar Panchayat Gallery ↗
+        </a>
+
+    </div>
+</article>
+
+            <!-- Seasonal observances -->
+          <!-- Event Card: Festive Season -->
+<article class="event-card" data-category="seasonal">
+
+    <!-- Event Image Section -->
+    <div class="event-card-image seasonal-event-image">
+
+        <!-- ADD IMAGE: Festive celebrations collage for Anand Nagar -->
+        <img src="../Images/Anand Nagar Festival Celebration Collage.png"
+             alt="Festival celebrations including Ganesh Chaturthi, Navratri, Dussehra, Diwali, and Chhath in Anand Nagar"
+             class="event-image">
+
+        <!-- Image Category Label -->
+        <span class="event-category"
+              data-en="SEASONAL OBSERVANCES"
+              data-hi="मौसमी पर्व">
+            SEASONAL OBSERVANCES
+        </span>
+
+    </div>
+
+    <!-- Event Details -->
+    <div class="event-card-content">
+
+        <div class="event-meta">
+            <span data-en="Dates vary each year"
+                  data-hi="तारीख हर वर्ष बदलती है">
+                Dates vary each year
+            </span>
+
+            <span class="event-status event-status-info"
+                  data-en="Confirm locally"
+                  data-hi="स्थानीय पुष्टि करें">
+                Confirm locally
+            </span>
+        </div>
+
+        <h3 data-en="Festive Season"
+            data-hi="त्योहारों का मौसम">
+            Festive Season
+        </h3>
+
+        <p data-en="Navratri, Dussehra, Diwali, and Chhath are seasonal observances celebrated in many parts of Uttar Pradesh. Local programs, pandals, processions, and timings in Anand Nagar should be confirmed with local organizers."
+           data-hi="नवरात्रि, दशहरा, दिवाली और छठ उत्तर प्रदेश के कई हिस्सों में मनाए जाने वाले मौसमी पर्व हैं। आनंद नगर में स्थानीय कार्यक्रमों, पंडालों, जुलूसों और समय की पुष्टि आयोजकों से करें।">
+            Navratri, Dussehra, Diwali, and Chhath are seasonal observances celebrated in many parts of Uttar Pradesh. Local programs, pandals, processions, and timings in Anand Nagar should be confirmed with local organizers.
+        </p>
+
+        <a href="https://maharajganj.nic.in/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="event-link"
+           data-en="Check District Updates ↗"
+           data-hi="जिला अपडेट देखें ↗">
+            Check District Updates ↗
+        </a>
+
+    </div>
+</article>
+            <!-- Community health -->
+          <!-- Event Card: Community Health Initiative -->
+<article class="event-card" data-category="community">
+
+    <!-- Event Image Section -->
+    <div class="event-card-image health-event-image">
+
+        <!-- ADD IMAGE: Community health camp in Anand Nagar -->
+        <img src="../Images/Anand Nagar Community Health Camp.png"
+             alt="Doctors and healthcare workers providing health check-ups at a community health camp in Anand Nagar"
+             class="event-image">
+
+        <!-- Image Category Label -->
+        <span class="event-category"
+              data-en="COMMUNITY INITIATIVE"
+              data-hi="सामुदायिक पहल">
+            COMMUNITY INITIATIVE
+        </span>
+
+    </div>
+
+    <!-- Event Details -->
+    <div class="event-card-content">
+
+        <div class="event-meta">
+            <span data-en="Nagar Panchayat Gallery"
+                  data-hi="नगर पंचायत गैलरी">
+                Nagar Panchayat Gallery
+            </span>
+
+            <span class="event-status event-status-info"
+                  data-en="No date published"
+                  data-hi="तारीख प्रकाशित नहीं">
+                No date published
+            </span>
+        </div>
+
+        <h3 data-en="Community Health Initiative"
+            data-hi="सामुदायिक स्वास्थ्य पहल">
+            Community Health Initiative
+        </h3>
+
+        <p data-en="Community health camps can help residents access basic health check-ups, medical guidance, and preventive-care information. Contact the Nagar Panchayat for details about any scheduled health camp or public program."
+           data-hi="सामुदायिक स्वास्थ्य शिविरों के माध्यम से निवासी सामान्य स्वास्थ्य जांच, चिकित्सकीय मार्गदर्शन और निवारक स्वास्थ्य संबंधी जानकारी प्राप्त कर सकते हैं। आगामी स्वास्थ्य शिविर या सार्वजनिक कार्यक्रम की जानकारी के लिए नगर पंचायत से संपर्क करें।">
+            Community health camps can help residents access basic health check-ups, medical guidance, and preventive-care information. Contact the Nagar Panchayat for details about any scheduled health camp or public program.
+        </p>
+
+        <a href="https://www.npanandnagar.org/contact"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="event-link"
+           data-en="Contact Nagar Panchayat ↗"
+           data-hi="नगर पंचायत से संपर्क करें ↗">
+            Contact Nagar Panchayat ↗
+        </a>
+
+    </div>
+</article>
+        </div>
+
+        <!-- Event submission / contact -->
+        <div class="events-contact">
+            <div>
+                <span class="events-eyebrow"
+                      data-en="SHARE A LOCAL EVENT"
+                      data-hi="स्थानीय आयोजन साझा करें">
+                    SHARE A LOCAL EVENT
+                </span>
+
+                <h3 data-en="Know about an upcoming event?"
+                    data-hi="क्या आपको किसी आगामी आयोजन की जानकारी है?">
+                    Know about an upcoming event?
+                </h3>
+
+                <p data-en="Help keep this town guide useful by sharing verified event details, dates, locations, and organizer information."
+                   data-hi="सत्यापित आयोजन विवरण, तारीख, स्थान और आयोजक की जानकारी साझा करके इस नगर गाइड को उपयोगी बनाएँ।">
+                    Help keep this town guide useful by sharing verified event details, dates, locations, and organizer information.
+                </p>
+            </div>
+
+            <a href="contact.html" class="events-contact-button"
+               data-en="Share Event Details →"
+               data-hi="आयोजन विवरण साझा करें →">
+                Share Event Details →
+            </a>
+        </div>
+
+    </section>
+</main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <!-- Same footer structure as the Home page -->
+    <footer class="site-footer">
+
+        <div class="container footer-main">
+
+            <div class="footer-brand-column">
+                <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+</a>
+
+                <p data-i18n="footerDescription">
+                    A community-focused city portal for discovering Anand Nagar
+                    and staying connected with local information.
+                </p>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerExploreTitle">Explore</h3>
+                <a href="about.html" data-i18n="navAbout">About</a>
+                <a href="explore.html" data-i18n="navExplore">Explore</a>
+                <a href="events.html" data-i18n="navEvents">Events</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerUsefulTitle">Useful Links</h3>
+                <a href="directory.html" data-i18n="navDirectory">Directory</a>
+                <a href="transport.html" data-i18n="navTransport">Transport</a>
+                <a href="contact.html" data-i18n="navContact">Contact</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerLocationTitle">Location</h3>
+                <p data-i18n="location">Maharajganj, Uttar Pradesh</p>
+                <p data-i18n="country">India</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+
+                <span>
+                    © <span id="currentYear"></span>
+                    <span data-i18n="copyright">
+                        Anand Nagar. All rights reserved.
+                    </span>
+                </span>
+
+                <span data-i18n="footerMadeFor">
+                    Made for the community.
+                </span>
+
+            </div>
+        </div>
+
+    </footer>
+
+<script src="../JS/script.js" defer></script>
+<script src="../JS/events.js" defer></script>
+
+</body>
+</html>

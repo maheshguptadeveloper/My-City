@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transport | Anand Nagar</title>
+    <meta name="description"
+          content="Find railway information, local travel options, and road directions for Anand Nagar (Pharenda), Maharajganj, Uttar Pradesh.">
+
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="../CSS/style.css">
+<link rel="stylesheet" href="../CSS/transport.css">
+
+    <!-- Site fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+</a>
+
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+                <a href="about.html" class="nav-link" data-i18n="navAbout">About</a>
+                <a href="explore.html" class="nav-link" data-i18n="navExplore">Explore</a>
+                <a href="events.html" class="nav-link" data-i18n="navEvents">Events</a>
+                <a href="directory.html" class="nav-link" data-i18n="navDirectory">Directory</a>
+
+                <a href="transport.html"
+                   class="nav-link active"
+                   aria-current="page"
+                   data-i18n="navTransport">
+                    Transport
+                </a>
+
+                <a href="news.html" class="nav-link" data-i18n="navUpdates">Updates</a>
+                <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+            </nav>
+
+            <button class="language-button"
+                    id="languageButton"
+                    type="button"
+                    aria-label="Switch language">
+                हिन्दी
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ================= TRANSPORT PAGE ================= -->
+    <main class="transport-page">
+
+        <!-- Hero -->
+        <section class="transport-hero">
+            <div class="transport-hero-content">
+                <span class="transport-eyebrow"
+                      data-en="GETTING AROUND"
+                      data-hi="आवागमन की जानकारी">
+                    GETTING AROUND
+                </span>
+
+                <h1 data-en="Travel to and Around Anand Nagar"
+                    data-hi="आनंद नगर आने-जाने और स्थानीय यात्रा की जानकारी">
+                    Travel to and Around Anand Nagar
+                </h1>
+
+                <p data-en="Explore railway information, local travel options, and road directions for Anand Nagar (Pharenda), Maharajganj."
+                   data-hi="आनंद नगर (फरेंदा), महाराजगंज के लिए रेल जानकारी, स्थानीय यात्रा विकल्प और सड़क मार्ग देखें।">
+                    Explore railway information, local travel options, and road directions for Anand Nagar (Pharenda), Maharajganj.
+                </p>
+
+                <a class="transport-hero-button"
+                   href="https://www.google.com/maps/search/?api=1&query=Anand+Nagar+Junction+Railway+Station+Pharenda"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-en="Open Location in Maps ↗"
+                   data-hi="मैप पर स्थान देखें ↗">
+                    Open Location in Maps ↗
+                </a>
+            </div>
+        </section>
+
+
+        <!-- Main content -->
+        <section class="transport-main">
+
+            <div class="transport-section-heading">
+                <span class="transport-eyebrow"
+                      data-en="TRANSPORT GUIDE"
+                      data-hi="यात्रा मार्गदर्शिका">
+                    TRANSPORT GUIDE
+                </span>
+
+                <h2 data-en="Choose Your Travel Option"
+                    data-hi="अपनी यात्रा का विकल्प चुनें">
+                    Choose Your Travel Option
+                </h2>
+
+                <p data-en="Use the information below to plan your journey. Confirm current schedules, fares, and availability before travelling."
+                   data-hi="अपनी यात्रा की योजना बनाने के लिए नीचे दी गई जानकारी देखें। यात्रा से पहले वर्तमान समय-सारणी, किराए और उपलब्धता की पुष्टि करें।">
+                    Use the information below to plan your journey. Confirm current schedules, fares, and availability before travelling.
+                </p>
+            </div>
+
+
+            <!-- Travel mode filters -->
+            <div class="transport-filters"
+                 role="group"
+                 aria-label="Filter transport options">
+
+                <button class="transport-filter active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true"
+                        data-en="All Options"
+                        data-hi="सभी विकल्प">
+                    All Options
+                </button>
+
+                <button class="transport-filter"
+                        type="button"
+                        data-filter="rail"
+                        aria-pressed="false"
+                        data-en="Railway"
+                        data-hi="रेलवे">
+                    Railway
+                </button>
+
+                <button class="transport-filter"
+                        type="button"
+                        data-filter="road"
+                        aria-pressed="false"
+                        data-en="Road Travel"
+                        data-hi="सड़क यात्रा">
+                    Road Travel
+                </button>
+
+                <button class="transport-filter"
+                        type="button"
+                        data-filter="local"
+                        aria-pressed="false"
+                        data-en="Local Mobility"
+                        data-hi="स्थानीय परिवहन">
+                    Local Mobility
+                </button>
+            </div>
+
+
+            <!-- Transport cards -->
+            <div class="transport-grid" id="transportGrid">
+
+                <!-- Railway -->
+                <article class="transport-card" data-category="rail">
+                    <div class="transport-card-icon" aria-hidden="true">🚆</div>
+
+                    <span class="transport-card-label"
+                          data-en="RAILWAY"
+                          data-hi="रेलवे">
+                        RAILWAY
+                    </span>
+
+                    <h3 data-en="Anand Nagar Junction"
+                        data-hi="आनंद नगर जंक्शन">
+                        Anand Nagar Junction
+                    </h3>
+
+                    <p data-en="The railway station serving Pharenda in Maharajganj district. Its Indian Railways station code is ANDN."
+                       data-hi="महाराजगंज जिले के फरेंदा क्षेत्र में स्थित रेलवे स्टेशन। इसका भारतीय रेलवे स्टेशन कोड ANDN है।">
+                        The railway station serving Pharenda in Maharajganj district. Its Indian Railways station code is ANDN.
+                    </p>
+
+                    <div class="transport-facts">
+                        <div>
+                            <span data-en="Station Code" data-hi="स्टेशन कोड">Station Code</span>
+                            <strong>ANDN</strong>
+                        </div>
+
+                        <div>
+                            <span data-en="Location" data-hi="स्थान">Location</span>
+                            <strong data-en="Pharenda, Maharajganj"
+                                    data-hi="फरेंदा, महाराजगंज">
+                                Pharenda, Maharajganj
+                            </strong>
+                        </div>
+                    </div>
+
+                    <a class="transport-card-link"
+                       href="https://enquiry.indianrail.gov.in/mntes/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-en="Check Railway Enquiry ↗"
+                       data-hi="रेलवे जानकारी देखें ↗">
+                        Check Railway Enquiry ↗
+                    </a>
+                </article>
+
+
+                <!-- Road travel -->
+                <article class="transport-card" data-category="road">
+                    <div class="transport-card-icon" aria-hidden="true">🛣️</div>
+
+                    <span class="transport-card-label"
+                          data-en="ROAD TRAVEL"
+                          data-hi="सड़क यात्रा">
+                        ROAD TRAVEL
+                    </span>
+
+                    <h3 data-en="Road Directions"
+                        data-hi="सड़क मार्ग">
+                        Road Directions
+                    </h3>
+
+                    <p data-en="Use map directions to plan a road journey to Anand Nagar. Check the route and current road conditions before departure."
+                       data-hi="आनंद नगर तक सड़क यात्रा की योजना बनाने के लिए मैप दिशा-निर्देश देखें। रवाना होने से पहले मार्ग और सड़क की वर्तमान स्थिति जाँचें।">
+                        Use map directions to plan a road journey to Anand Nagar. Check the route and current road conditions before departure.
+                    </p>
+
+                    <div class="transport-facts">
+                        <div>
+                            <span data-en="Destination" data-hi="गंतव्य">Destination</span>
+                            <strong>Anand Nagar, Pharenda</strong>
+                        </div>
+
+                        <div>
+                            <span data-en="District" data-hi="जिला">District</span>
+                            <strong>Maharajganj</strong>
+                        </div>
+                    </div>
+
+                    <a class="transport-card-link"
+                       href="https://www.google.com/maps/dir/?api=1&destination=Anand+Nagar%2C+Pharenda%2C+Maharajganj%2C+Uttar+Pradesh"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-en="Get Road Directions ↗"
+                       data-hi="सड़क मार्ग देखें ↗">
+                        Get Road Directions ↗
+                    </a>
+                </article>
+
+
+                <!-- Local mobility -->
+                <article class="transport-card" data-category="local">
+                    <div class="transport-card-icon" aria-hidden="true">🛺</div>
+
+                    <span class="transport-card-label"
+                          data-en="LOCAL MOBILITY"
+                          data-hi="स्थानीय परिवहन">
+                        LOCAL MOBILITY
+                    </span>
+
+                    <h3 data-en="Local Auto & E-Rickshaw"
+                        data-hi="स्थानीय ऑटो और ई-रिक्शा">
+                        Local Auto & E-Rickshaw
+                    </h3>
+
+                    <p data-en="For shorter trips within town, ask locally about available auto-rickshaw or e-rickshaw services. Confirm the fare and drop-off point before starting."
+                       data-hi="शहर के भीतर छोटी यात्राओं के लिए स्थानीय स्तर पर ऑटो या ई-रिक्शा की उपलब्धता पूछें। यात्रा शुरू करने से पहले किराया और उतरने का स्थान तय करें।">
+                        For shorter trips within town, ask locally about available auto-rickshaw or e-rickshaw services. Confirm the fare and drop-off point before starting.
+                    </p>
+
+                    <div class="transport-facts">
+                        <div>
+                            <span data-en="Service Details" data-hi="सेवा विवरण">Service Details</span>
+                            <strong data-en="Confirm locally"
+                                    data-hi="स्थानीय रूप से पुष्टि करें">
+                                Confirm locally
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span data-en="Fare" data-hi="किराया">Fare</span>
+                            <strong data-en="Ask before travel"
+                                    data-hi="यात्रा से पहले पूछें">
+                                Ask before travel
+                            </strong>
+                        </div>
+                    </div>
+
+                    <a class="transport-card-link"
+                       href="https://www.google.com/maps/search/?api=1&query=Anand+Nagar+Pharenda"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-en="View Town Area ↗"
+                       data-hi="शहर का क्षेत्र देखें ↗">
+                        View Town Area ↗
+                    </a>
+                </article>
+
+            </div>
+
+
+            <!-- Journey planning -->
+            <section class="journey-panel">
+                <div class="journey-panel-content">
+                    <span class="transport-eyebrow"
+                          data-en="BEFORE YOU TRAVEL"
+                          data-hi="यात्रा से पहले">
+                        BEFORE YOU TRAVEL
+                    </span>
+
+                    <h2 data-en="A Few Things to Check"
+                        data-hi="कुछ ज़रूरी बातें">
+                        A Few Things to Check
+                    </h2>
+
+                    <ul class="journey-checklist">
+                        <li data-en="Check train timings and running status through official railway enquiry."
+                            data-hi="ट्रेन का समय और चलने की स्थिति आधिकारिक रेलवे पूछताछ से जाँचें।">
+                            Check train timings and running status through official railway enquiry.
+                        </li>
+
+                        <li data-en="Confirm local vehicle availability and fares directly with the service provider."
+                            data-hi="स्थानीय वाहन की उपलब्धता और किराए की पुष्टि सीधे सेवा प्रदाता से करें।">
+                            Confirm local vehicle availability and fares directly with the service provider.
+                        </li>
+
+                        <li data-en="Use map directions for your starting point and destination."
+                            data-hi="अपने शुरुआती स्थान और गंतव्य के लिए मैप दिशा-निर्देश देखें।">
+                            Use map directions for your starting point and destination.
+                        </li>
+
+                        <li data-en="Allow extra time for transfers, waiting, and unexpected delays."
+                            data-hi="वाहन बदलने, प्रतीक्षा और अनपेक्षित देरी के लिए अतिरिक्त समय रखें।">
+                            Allow extra time for transfers, waiting, and unexpected delays.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="journey-panel-action">
+                    <div class="journey-action-icon" aria-hidden="true">📍</div>
+
+                    <h3 data-en="Find Anand Nagar"
+                        data-hi="आनंद नगर का स्थान देखें">
+                        Find Anand Nagar
+                    </h3>
+
+                    <p data-en="Open the town location in Google Maps to view directions from your current location."
+                       data-hi="अपने वर्तमान स्थान से दिशा-निर्देश देखने के लिए आनंद नगर का स्थान Google Maps में खोलें।">
+                        Open the town location in Google Maps to view directions from your current location.
+                    </p>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Anand+Nagar+Pharenda+Maharajganj"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="journey-map-button"
+                       data-en="Open Google Maps ↗"
+                       data-hi="Google Maps खोलें ↗">
+                        Open Google Maps ↗
+                    </a>
+                </div>
+            </section>
+
+
+            <p class="transport-disclaimer"
+               data-en="This page is a general travel guide, not a live timetable. Train schedules, road conditions, local vehicle availability, routes, and fares may change. Verify details with the relevant operator before travelling."
+               data-hi="यह पृष्ठ सामान्य यात्रा मार्गदर्शिका है, लाइव समय-सारणी नहीं। ट्रेन का समय, सड़क की स्थिति, स्थानीय वाहनों की उपलब्धता, मार्ग और किराए बदल सकते हैं। यात्रा से पहले संबंधित सेवा प्रदाता से पुष्टि करें।">
+                This page is a general travel guide, not a live timetable. Train schedules, road conditions, local vehicle availability, routes, and fares may change. Verify details with the relevant operator before travelling.
+            </p>
+
+        </section>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="container footer-main">
+
+            <div class="footer-brand-column">
+                <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+</a>
+
+                <p data-i18n="footerDescription">
+                    A community-focused city portal for discovering Anand Nagar
+                    and staying connected with local information.
+                </p>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerExploreTitle">Explore</h3>
+                <a href="about.html" data-i18n="navAbout">About</a>
+                <a href="explore.html" data-i18n="navExplore">Explore</a>
+                <a href="events.html" data-i18n="navEvents">Events</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerUsefulTitle">Useful Links</h3>
+                <a href="directory.html" data-i18n="navDirectory">Directory</a>
+                <a href="transport.html" aria-current="page" data-i18n="navTransport">Transport</a>
+                <a href="contact.html" data-i18n="navContact">Contact</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerLocationTitle">Location</h3>
+                <p data-i18n="location">Maharajganj, Uttar Pradesh</p>
+                <p data-i18n="country">India</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span>
+                    © <span id="currentYear"></span>
+                    <span data-i18n="copyright">
+                        Anand Nagar. All rights reserved.
+                    </span>
+                </span>
+
+                <span data-i18n="footerMadeFor">
+                    Made for the community.
+                </span>
+            </div>
+        </div>
+
+    </footer>
+
+   <script src="../JS/script.js" defer></script>
+<script src="../JS/transport.js" defer></script>
+
+</body>
+</html>

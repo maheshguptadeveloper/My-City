@@ -1,0 +1,363 @@
+/* =========================================
+   EVENTS PAGE
+   Uses shared variables from style.css
+========================================= */
+
+.events-page {
+    min-height: 70vh;
+    background: var(--cream);
+    color: var(--text);
+}
+
+/* Hero */
+.events-hero {
+    padding: 85px 20px 75px;
+    text-align: center;
+    background: var(--green-soft);
+}
+
+.events-hero-content {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.events-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.events-hero h1 {
+    margin: 0;
+    color: var(--green);
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 5vw, 55px);
+    line-height: 1.2;
+}
+
+.events-hero p {
+    max-width: 650px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Main content
+   Use events-main to avoid conflicting with
+   .events-content in shared style.css.
+*/
+.events-main {
+    width: min(var(--container-width), calc(100% - 40px));
+    margin: 0 auto;
+    padding: 75px 0 85px;
+}
+
+.events-section-heading {
+    max-width: 720px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.events-section-heading h2 {
+    margin: 0;
+    color: var(--green);
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+}
+
+.events-section-heading p {
+    margin-top: 13px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Category filters */
+.event-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.event-filter {
+    padding: 9px 18px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: var(--white);
+    color: var(--green);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.event-filter:hover,
+.event-filter.active {
+    border-color: var(--green);
+    background: var(--green);
+    color: var(--white);
+}
+
+/* Cards */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.event-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--white);
+    box-shadow: 0 8px 24px rgba(23, 61, 50, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.event-card[hidden] {
+    display: none !important;
+}
+
+.event-card-image {
+    position: relative;
+    min-height: 210px;
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--green-soft), #c6d7ca);
+}
+
+.ganesh-event-image {
+    background:
+        radial-gradient(circle at 50% 35%, rgba(232, 201, 144, 0.8), transparent 35%),
+        linear-gradient(135deg, #276e5b, #b98532);
+}
+
+.community-event-image {
+    background:
+        radial-gradient(circle at 75% 25%, rgba(255,255,255,0.45), transparent 30%),
+        linear-gradient(135deg, #668e7d, #d8c18e);
+}
+
+.seasonal-event-image {
+    background:
+        radial-gradient(circle at 30% 35%, rgba(255,255,255,0.45), transparent 28%),
+        linear-gradient(135deg, #b98532, #e8c990);
+}
+
+.health-event-image {
+    background:
+        radial-gradient(circle at 70% 25%, rgba(255,255,255,0.45), transparent 30%),
+        linear-gradient(135deg, #5d8e91, #c6d7ca);
+}
+
+.event-category {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 8px 11px;
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.event-card-content {
+    padding: 24px;
+}
+
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.event-status {
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #fff3df;
+    color: #8a5b15;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.event-status-info {
+    background: var(--green-soft);
+    color: var(--green);
+}
+
+.event-card h3 {
+    margin: 0 0 11px;
+    color: var(--green);
+    font-family: var(--font-heading);
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+.event-card p {
+    margin: 0 0 19px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.event-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.event-link:hover {
+    color: var(--gold);
+}
+
+/* Share event callout */
+.events-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 38px;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--white);
+}
+
+.events-contact h3 {
+    margin: 0;
+    color: var(--green);
+    font-family: var(--font-heading);
+    font-size: 25px;
+    line-height: 1.35;
+}
+
+.events-contact p {
+    max-width: 650px;
+    margin-top: 9px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.events-contact-button {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 10px 17px;
+    border-radius: 7px;
+    background: var(--green);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.events-contact-button:hover {
+    background: var(--green-dark);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .events-hero {
+        padding: 65px 20px;
+    }
+
+    .events-main {
+        padding: 55px 0 65px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-contact {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .events-main {
+        width: calc(100% - 28px);
+    }
+
+    .event-card-image {
+        min-height: 175px;
+    }
+
+    .event-card-content {
+        padding: 19px;
+    }
+
+    .event-card h3 {
+        font-size: 20px;
+    }
+
+    .events-contact {
+        padding: 22px;
+    }
+
+    .event-filter {
+        padding: 8px 14px;
+    }
+}
+/* =========================================
+   GANESHOTSAV EVENT IMAGE
+   Displays the complete image without cropping.
+========================================= */
+
+.ganesh-event-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #e9e5d9;
+}
+
+/* Show the full original image */
+.ganesh-event-image .event-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Keep the category label over the image */
+.ganesh-event-image .event-category {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+}

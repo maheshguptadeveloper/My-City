@@ -1,0 +1,400 @@
+/* ================= TRANSPORT PAGE ================= */
+
+.transport-page {
+    background: #f8f9fb;
+    color: #202633;
+    font-family: "DM Sans", sans-serif;
+}
+
+.transport-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 390px;
+    padding: 70px 7%;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(12, 27, 44, .88), rgba(12, 27, 44, .48)),
+        url("../Images/Anand Nagar Junction Station Entrance.png") center 48% / cover no-repeat;
+}
+
+.transport-hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 760px);
+    color: #fff;
+}
+
+.transport-eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: #c17a3c;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.transport-hero h1 {
+    max-width: 720px;
+    margin: 0 0 18px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.transport-hero p {
+    max-width: 650px;
+    margin: 0 0 26px;
+    color: rgba(255, 255, 255, .88);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.transport-hero-button,
+.journey-map-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 22px;
+    border: 1px solid #c17a3c;
+    border-radius: 5px;
+    background: #c17a3c;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.transport-hero-button:hover,
+.journey-map-button:hover {
+    transform: translateY(-2px);
+    background: #a9612b;
+}
+
+
+/* Main layout */
+
+.transport-main {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 70px 0 75px;
+}
+
+.transport-section-heading {
+    max-width: 720px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.transport-section-heading h2,
+.journey-panel h2 {
+    margin: 0 0 13px;
+    color: #1f2937;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(27px, 3vw, 36px);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.transport-section-heading p {
+    margin: 0;
+    color: #687386;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* Filters */
+
+.transport-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0 35px;
+}
+
+.transport-filter {
+    min-height: 40px;
+    padding: 9px 17px;
+    border: 1px solid #dce1e8;
+    border-radius: 30px;
+    background: #fff;
+    color: #4b5563;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+.transport-filter:hover,
+.transport-filter.active {
+    border-color: #173b5e;
+    background: #173b5e;
+    color: #fff;
+}
+
+.transport-filter:focus-visible,
+.transport-card-link:focus-visible,
+.transport-hero-button:focus-visible,
+.journey-map-button:focus-visible {
+    outline: 3px solid #e8a45e;
+    outline-offset: 3px;
+}
+
+
+/* Cards */
+
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.transport-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 26px;
+    border: 1px solid #e7eaf0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(24, 39, 58, .045);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.transport-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(24, 39, 58, .09);
+}
+
+.transport-card[hidden] {
+    display: none;
+}
+
+.transport-card-icon {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 19px;
+    place-items: center;
+    border-radius: 12px;
+    background: #f4eee7;
+    font-size: 25px;
+}
+
+.transport-card-label {
+    margin-bottom: 8px;
+    color: #b66d34;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.transport-card h3 {
+    margin: 0 0 12px;
+    color: #202b3a;
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.transport-card > p {
+    margin: 0 0 20px;
+    color: #657184;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.transport-facts {
+    display: grid;
+    gap: 12px;
+    margin-top: auto;
+    padding: 16px 0;
+    border-top: 1px solid #edf0f4;
+}
+
+.transport-facts div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.transport-facts span {
+    color: #8993a2;
+    font-size: 11px;
+}
+
+.transport-facts strong {
+    color: #303b4b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.transport-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+    margin-top: 6px;
+    color: #a85f2e;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.transport-card-link:hover {
+    color: #713d1d;
+    text-decoration: underline;
+}
+
+
+/* Journey panel */
+
+.journey-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, .8fr);
+    gap: 35px;
+    margin-top: 65px;
+    padding: 36px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(24, 39, 58, .05);
+}
+
+.journey-panel-content {
+    min-width: 0;
+}
+
+.journey-checklist {
+    display: grid;
+    gap: 14px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.journey-checklist li {
+    position: relative;
+    padding-left: 28px;
+    color: #5f6b7c;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.journey-checklist li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #b66d34;
+    content: "✓";
+    font-weight: 700;
+}
+
+.journey-panel-action {
+    align-self: center;
+    padding: 25px;
+    border-radius: 10px;
+    background: #f5f2ee;
+}
+
+.journey-action-icon {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.journey-panel-action h3 {
+    margin: 0 0 9px;
+    color: #273447;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
+
+.journey-panel-action p {
+    margin: 0 0 18px;
+    color: #697587;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.journey-map-button {
+    min-height: 42px;
+    padding: 0 16px;
+    font-size: 12px;
+}
+
+
+/* Disclaimer */
+
+.transport-disclaimer {
+    margin: 24px auto 0;
+    padding: 15px 18px;
+    border-left: 3px solid #c17a3c;
+    background: #f0f2f5;
+    color: #687386;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .transport-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .journey-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .transport-hero {
+        min-height: 350px;
+        padding: 55px 22px;
+        background-position: center;
+    }
+
+    .transport-hero p {
+        font-size: 14px;
+    }
+
+    .transport-main {
+        width: min(100% - 30px, 1160px);
+        padding: 48px 0;
+    }
+
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transport-card {
+        padding: 23px;
+    }
+
+    .transport-filters {
+        justify-content: flex-start;
+    }
+
+    .transport-filter {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    .journey-panel {
+        gap: 24px;
+        margin-top: 45px;
+        padding: 23px;
+    }
+
+    .journey-panel-action {
+        padding: 20px;
+    }
+}

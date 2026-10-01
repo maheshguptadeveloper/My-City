@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Local Directory | Anand Nagar</title>
+
+    <!-- Common styles: header, navigation, footer, typography -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- Directory page-specific styles -->
+    <link rel="stylesheet" href="../CSS/directory.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         SHARED SITE HEADER
+    ========================================== -->
+  <!-- ================= HEADER ================= -->
+<header class="site-header">
+    <div class="container header-inner">
+
+       <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+</a>
+
+        <button class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-navigation" id="mainNavigation">
+            <a href="index.html" class="nav-link" data-i18n="navHome">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link" data-i18n="navAbout">
+                About
+            </a>
+
+            <a href="explore.html" class="nav-link" data-i18n="navExplore">
+                Explore
+            </a>
+
+            <a href="events.html" class="nav-link" data-i18n="navEvents">
+                Events
+            </a>
+
+            <a href="directory.html"
+               class="nav-link active"
+               aria-current="page"
+               data-i18n="navDirectory">
+                Directory
+            </a>
+
+            <a href="transport.html" class="nav-link" data-i18n="navTransport">
+                Transport
+            </a>
+
+            <a href="news.html" class="nav-link" data-i18n="navUpdates">
+                Updates
+            </a>
+
+            <a href="contact.html" class="nav-link" data-i18n="navContact">
+                Contact
+            </a>
+        </nav>
+
+        <button class="language-button"
+                id="languageButton"
+                type="button"
+                aria-label="Switch language">
+            हिन्दी
+        </button>
+
+    </div>
+</header>
+
+
+    <!-- =========================================
+         DIRECTORY PAGE CONTENT
+    ========================================== -->
+    <main class="directory-page">
+
+        <!-- Directory Hero -->
+        <section class="directory-hero">
+            <div class="directory-hero-content">
+
+                <span class="directory-eyebrow"
+                      data-en="LOCAL DIRECTORY"
+                      data-hi="स्थानीय निर्देशिका">
+                    LOCAL DIRECTORY
+                </span>
+
+                <h1 data-en="Find Local Businesses & Services"
+                    data-hi="स्थानीय व्यवसाय और सेवाएँ खोजें">
+                    Find Local Businesses & Services
+                </h1>
+
+                <p data-en="Explore shops, essential services, public facilities, and local places around Anand Nagar."
+                   data-hi="आनंद नगर के आसपास दुकानों, आवश्यक सेवाओं, सार्वजनिक सुविधाओं और स्थानीय स्थानों की जानकारी देखें।">
+                    Explore shops, essential services, public facilities, and local places around Anand Nagar.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Search and Category Filters -->
+        <section class="directory-main">
+
+            <div class="directory-search-panel">
+                <label for="directorySearch"
+                       class="directory-search-label"
+                       data-en="Search the directory"
+                       data-hi="निर्देशिका में खोजें">
+                    Search the directory
+                </label>
+
+                <div class="directory-search-box">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+
+                    <input type="search"
+                           id="directorySearch"
+                           placeholder="Search shops, services, or categories..."
+                           data-placeholder-en="Search shops, services, or categories..."
+                           data-placeholder-hi="दुकान, सेवा या श्रेणी खोजें..."
+                           autocomplete="off">
+
+                    <button type="button"
+                            id="clearDirectorySearch"
+                            class="clear-search-button"
+                            aria-label="Clear search"
+                            hidden>
+                        ×
+                    </button>
+                </div>
+
+                <p class="directory-search-hint"
+                   data-en="Search by category or service type."
+                   data-hi="श्रेणी या सेवा के प्रकार से खोजें।">
+                    Search by category or service type.
+                </p>
+            </div>
+
+
+            <!-- Category Filter Buttons -->
+            <div class="directory-filters"
+                 role="group"
+                 aria-label="Filter directory categories">
+
+                <button class="directory-filter active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true"
+                        data-en="All Categories"
+                        data-hi="सभी श्रेणियाँ">
+                    All Categories
+                </button>
+
+                <button class="directory-filter"
+                        type="button"
+                        data-filter="shopping"
+                        aria-pressed="false"
+                        data-en="Shopping"
+                        data-hi="खरीदारी">
+                    Shopping
+                </button>
+
+                <button class="directory-filter"
+                        type="button"
+                        data-filter="health"
+                        aria-pressed="false"
+                        data-en="Healthcare"
+                        data-hi="स्वास्थ्य सेवा">
+                    Healthcare
+                </button>
+
+                <button class="directory-filter"
+                        type="button"
+                        data-filter="education"
+                        aria-pressed="false"
+                        data-en="Education"
+                        data-hi="शिक्षा">
+                    Education
+                </button>
+
+                <button class="directory-filter"
+                        type="button"
+                        data-filter="public"
+                        aria-pressed="false"
+                        data-en="Public Services"
+                        data-hi="सार्वजनिक सेवाएँ">
+                    Public Services
+                </button>
+
+                <button class="directory-filter"
+                        type="button"
+                        data-filter="local-services"
+                        aria-pressed="false"
+                        data-en="Local Services"
+                        data-hi="स्थानीय सेवाएँ">
+                    Local Services
+                </button>
+
+                <button class="directory-filter"
+                        type="button"
+                        data-filter="food-stay"
+                        aria-pressed="false"
+                        data-en="Food & Stay"
+                        data-hi="भोजन और ठहरने की जगह">
+                    Food & Stay
+                </button>
+
+            </div>
+
+
+            <!-- Category Cards -->
+            <div class="directory-results-heading">
+                <div>
+                    <span class="directory-eyebrow"
+                          data-en="EXPLORE BY CATEGORY"
+                          data-hi="श्रेणी के अनुसार देखें">
+                        EXPLORE BY CATEGORY
+                    </span>
+
+                    <h2 data-en="What are you looking for?"
+                        data-hi="आप क्या खोज रहे हैं?">
+                        What are you looking for?
+                    </h2>
+                </div>
+
+                <span class="directory-result-count" id="directoryResultCount"
+                      aria-live="polite">
+                    6 categories
+                </span>
+            </div>
+
+
+            <div class="directory-grid" id="directoryGrid">
+
+                <!-- Shopping -->
+                <article class="directory-card"
+                         data-category="shopping"
+                         data-search="shopping market grocery general store clothing garments electronics hardware stationery shops">
+
+                    <div class="directory-card-icon" aria-hidden="true">🛍️</div>
+
+                    <span class="directory-card-number">01</span>
+
+                    <h3 data-en="Shops & Markets"
+                        data-hi="दुकानें और बाज़ार">
+                        Shops & Markets
+                    </h3>
+
+                    <p data-en="Browse grocery stores, clothing shops, electronics, hardware, stationery, and local market areas."
+                       data-hi="किराना, कपड़ों, इलेक्ट्रॉनिक्स, हार्डवेयर, स्टेशनरी की दुकानों और स्थानीय बाज़ारों की जानकारी देखें।">
+                        Browse grocery stores, clothing shops, electronics, hardware, stationery, and local market areas.
+                    </p>
+
+                    <button class="directory-card-link"
+                            type="button"
+                            data-category-select="shopping">
+                        <span data-en="Explore category" data-hi="श्रेणी देखें">
+                            Explore category
+                        </span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </article>
+
+
+                <!-- Healthcare -->
+                <article class="directory-card"
+                         data-category="health"
+                         data-search="healthcare hospital clinic doctor pharmacy medical diagnostic laboratory health centre">
+
+                    <div class="directory-card-icon" aria-hidden="true">✚</div>
+
+                    <span class="directory-card-number">02</span>
+
+                    <h3 data-en="Healthcare"
+                        data-hi="स्वास्थ्य सेवा">
+                        Healthcare
+                    </h3>
+
+                    <p data-en="Find healthcare categories such as hospitals, clinics, pharmacies, diagnostic centres, and medical services."
+                       data-hi="अस्पताल, क्लिनिक, दवा दुकानों, जाँच केंद्रों और चिकित्सा सेवाओं की श्रेणियाँ देखें।">
+                        Find healthcare categories such as hospitals, clinics, pharmacies, diagnostic centres, and medical services.
+                    </p>
+
+                    <button class="directory-card-link"
+                            type="button"
+                            data-category-select="health">
+                        <span data-en="Explore category" data-hi="श्रेणी देखें">
+                            Explore category
+                        </span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </article>
+
+
+                <!-- Education -->
+                <article class="directory-card"
+                         data-category="education"
+                         data-search="education school college coaching centre library computer training institute">
+
+                    <div class="directory-card-icon" aria-hidden="true">🎓</div>
+
+                    <span class="directory-card-number">03</span>
+
+                    <h3 data-en="Education"
+                        data-hi="शिक्षा">
+                        Education
+                    </h3>
+
+                    <p data-en="Explore schools, colleges, coaching centres, libraries, and training institutes."
+                       data-hi="स्कूल, कॉलेज, कोचिंग सेंटर, पुस्तकालय और प्रशिक्षण संस्थानों की जानकारी देखें।">
+                        Explore schools, colleges, coaching centres, libraries, and training institutes.
+                    </p>
+
+                    <button class="directory-card-link"
+                            type="button"
+                            data-category-select="education">
+                        <span data-en="Explore category" data-hi="श्रेणी देखें">
+                            Explore category
+                        </span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </article>
+
+
+                <!-- Public Services -->
+                <article class="directory-card"
+                         data-category="public"
+                         data-search="government public services nagar panchayat post office police station public office">
+
+                    <div class="directory-card-icon" aria-hidden="true">🏛️</div>
+
+                    <span class="directory-card-number">04</span>
+
+                    <h3 data-en="Government & Public Services"
+                        data-hi="सरकारी और सार्वजनिक सेवाएँ">
+                        Government & Public Services
+                    </h3>
+
+                    <p data-en="Find public-service categories such as municipal offices, post offices, police services, and civic facilities."
+                       data-hi="नगर निकाय कार्यालय, डाकघर, पुलिस सेवाओं और नागरिक सुविधाओं जैसी सार्वजनिक सेवाओं की जानकारी देखें।">
+                        Find public-service categories such as municipal offices, post offices, police services, and civic facilities.
+                    </p>
+
+                    <button class="directory-card-link"
+                            type="button"
+                            data-category-select="public">
+                        <span data-en="Explore category" data-hi="श्रेणी देखें">
+                            Explore category
+                        </span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </article>
+
+
+                <!-- Local Services -->
+                <article class="directory-card"
+                         data-category="local-services"
+                         data-search="local services electrician plumber repair mobile repair salon tailoring mechanic">
+
+                    <div class="directory-card-icon" aria-hidden="true">🛠️</div>
+
+                    <span class="directory-card-number">05</span>
+
+                    <h3 data-en="Local Services"
+                        data-hi="स्थानीय सेवाएँ">
+                        Local Services
+                    </h3>
+
+                    <p data-en="Browse service types such as electricians, plumbers, repair shops, salons, tailoring, and mechanics."
+                       data-hi="इलेक्ट्रिशियन, प्लंबर, मरम्मत की दुकानों, सैलून, दर्जी और मैकेनिक जैसी सेवाओं की श्रेणियाँ देखें।">
+                        Browse service types such as electricians, plumbers, repair shops, salons, tailoring, and mechanics.
+                    </p>
+
+                    <button class="directory-card-link"
+                            type="button"
+                            data-category-select="local-services">
+                        <span data-en="Explore category" data-hi="श्रेणी देखें">
+                            Explore category
+                        </span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </article>
+
+
+                <!-- Food & Stay -->
+                <article class="directory-card"
+                         data-category="food-stay"
+                         data-search="food stay restaurant cafe tea snacks hotel guest house accommodation">
+
+                    <div class="directory-card-icon" aria-hidden="true">☕</div>
+
+                    <span class="directory-card-number">06</span>
+
+                    <h3 data-en="Food & Accommodation"
+                        data-hi="भोजन और ठहरने की जगह">
+                        Food & Accommodation
+                    </h3>
+
+                    <p data-en="Explore food and stay categories including restaurants, cafés, tea stalls, hotels, and guest houses."
+                       data-hi="रेस्तराँ, कैफ़े, चाय की दुकानों, होटल और गेस्ट हाउस जैसी भोजन और ठहरने की श्रेणियाँ देखें।">
+                        Explore food and stay categories including restaurants, cafés, tea stalls, hotels, and guest houses.
+                    </p>
+
+                    <button class="directory-card-link"
+                            type="button"
+                            data-category-select="food-stay">
+                        <span data-en="Explore category" data-hi="श्रेणी देखें">
+                            Explore category
+                        </span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </article>
+
+            </div>
+
+
+            <!-- No Results Message -->
+            <div class="directory-empty-state" id="directoryEmptyState" hidden>
+                <div class="empty-state-icon" aria-hidden="true">⌕</div>
+
+                <h3 data-en="No matching categories found"
+                    data-hi="कोई मिलती-जुलती श्रेणी नहीं मिली">
+                    No matching categories found
+                </h3>
+
+                <p data-en="Try another search term or select All Categories."
+                   data-hi="कोई दूसरा शब्द खोजें या सभी श्रेणियाँ चुनें।">
+                    Try another search term or select All Categories.
+                </p>
+            </div>
+
+
+            <!-- Add a Listing -->
+            <section class="directory-submit">
+                <div class="directory-submit-content">
+                    <span class="directory-eyebrow"
+                          data-en="HELP GROW THE DIRECTORY"
+                          data-hi="निर्देशिका को बेहतर बनाने में मदद करें">
+                        HELP GROW THE DIRECTORY
+                    </span>
+
+                    <h2 data-en="Know a local business or service?"
+                        data-hi="क्या आप किसी स्थानीय व्यवसाय या सेवा को जानते हैं?">
+                        Know a local business or service?
+                    </h2>
+
+                    <p data-en="Help us make this directory more useful by sharing verified business or service details."
+                       data-hi="सत्यापित व्यवसाय या सेवा की जानकारी साझा करके इस निर्देशिका को और उपयोगी बनाने में मदद करें।">
+                        Help us make this directory more useful by sharing verified business or service details.
+                    </p>
+                </div>
+
+                <a href="contact.html"
+                   class="directory-submit-button"
+                   data-en="Suggest a Listing →"
+                   data-hi="लिस्टिंग सुझाएँ →">
+                    Suggest a Listing →
+                </a>
+            </section>
+
+            <p class="directory-disclaimer"
+               data-en="Directory listings and contact details should be verified before publication. This page currently presents categories, not confirmed business listings."
+               data-hi="प्रकाशित करने से पहले निर्देशिका की प्रविष्टियों और संपर्क विवरणों की पुष्टि की जानी चाहिए। इस पृष्ठ पर अभी श्रेणियाँ दी गई हैं, सत्यापित व्यवसाय सूची नहीं।">
+                Directory listings and contact details should be verified before publication. This page currently presents categories, not confirmed business listings.
+            </p>
+
+        </section>
+    </main>
+
+
+    <!-- =========================================
+         SHARED SITE FOOTER
+    ========================================== -->
+   <!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand-column">
+            <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+</a>
+
+            <p data-i18n="footerDescription">
+                A community-focused city portal for discovering Anand Nagar
+                and staying connected with local information.
+            </p>
+        </div>
+
+        <div class="footer-links-column">
+            <h3 data-i18n="footerExploreTitle">Explore</h3>
+            <a href="about.html" data-i18n="navAbout">About</a>
+            <a href="explore.html" data-i18n="navExplore">Explore</a>
+            <a href="events.html" data-i18n="navEvents">Events</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3 data-i18n="footerUsefulTitle">Useful Links</h3>
+            <a href="directory.html"
+               aria-current="page"
+               data-i18n="navDirectory">Directory</a>
+            <a href="transport.html" data-i18n="navTransport">Transport</a>
+            <a href="contact.html" data-i18n="navContact">Contact</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3 data-i18n="footerLocationTitle">Location</h3>
+            <p data-i18n="location">Maharajganj, Uttar Pradesh</p>
+            <p data-i18n="country">India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+
+            <span>
+                © <span id="currentYear"></span>
+                <span data-i18n="copyright">
+                    Anand Nagar. All rights reserved.
+                </span>
+            </span>
+
+            <span data-i18n="footerMadeFor">
+                Made for the community.
+            </span>
+
+        </div>
+    </div>
+
+</footer>
+
+
+    <!-- Shared site JavaScript -->
+    <script src="../JS/script.js" defer></script>
+
+    <!-- Directory page JavaScript -->
+    <script src="../JS/directory.js" defer></script>
+
+</body>
+</html>

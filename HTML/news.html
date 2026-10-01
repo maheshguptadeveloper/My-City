@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Local news, civic updates and community notices for Anand Nagar (Pharenda), Maharajganj.">
+    <title>Local Updates | Anand Nagar</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/updates.css">
+</head>
+<body>
+
+    <!-- Shared website header -->
+    <!-- ================= HEADER ================= -->
+<!-- Same header structure as the Events page -->
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+</a>
+
+        <button class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-navigation" id="mainNavigation">
+            <a href="index.html"
+               class="nav-link"
+               data-i18n="navHome">
+                Home
+            </a>
+
+            <a href="about.html"
+               class="nav-link"
+               data-i18n="navAbout">
+                About
+            </a>
+
+            <a href="explore.html"
+               class="nav-link"
+               data-i18n="navExplore">
+                Explore
+            </a>
+
+            <a href="events.html"
+               class="nav-link"
+               data-i18n="navEvents">
+                Events
+            </a>
+
+            <a href="directory.html"
+               class="nav-link"
+               data-i18n="navDirectory">
+                Directory
+            </a>
+
+            <a href="transport.html"
+               class="nav-link"
+               data-i18n="navTransport">
+                Transport
+            </a>
+
+            <!-- Active navigation item for Updates page -->
+            <a href="updates.html"
+               class="nav-link active"
+               aria-current="page"
+               data-i18n="navUpdates">
+                Updates
+            </a>
+
+            <a href="contact.html"
+               class="nav-link"
+               data-i18n="navContact">
+                Contact
+            </a>
+        </nav>
+
+        <button class="language-button"
+                id="languageButton"
+                type="button"
+                aria-label="Switch language">
+            हिन्दी
+        </button>
+
+    </div>
+</header>
+
+    <main>
+        <!-- Page hero -->
+        <section class="updates-hero">
+            <div class="updates-hero-overlay"></div>
+
+            <div class="container updates-hero-content">
+                <span class="eyebrow" data-en="WHAT'S HAPPENING" data-hi="आस-पास की खबरें">
+                    WHAT'S HAPPENING
+                </span>
+
+                <h1
+                    data-en="News & Updates from Anand Nagar"
+                    data-hi="आनंद नगर की खबरें और अपडेट">
+                    News & Updates from Anand Nagar
+                </h1>
+
+                <p
+                    data-en="Local developments, civic information and community stories from Anand Nagar (Pharenda), Maharajganj."
+                    data-hi="आनंद नगर (फरेंदा), महराजगंज से स्थानीय विकास, नागरिक जानकारी और समुदाय से जुड़ी खबरें।">
+                    Local developments, civic information and community stories from Anand Nagar (Pharenda), Maharajganj.
+                </p>
+
+                <a class="hero-button" href="#latestUpdates">
+                    <span data-en="Explore Latest Updates" data-hi="ताज़ा अपडेट देखें">Explore Latest Updates</span>
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Updates section -->
+        <section class="updates-section" id="latestUpdates">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow" data-en="LOCAL STORIES" data-hi="स्थानीय समाचार">
+                        LOCAL STORIES
+                    </span>
+                    <h2 data-en="Latest from the Community" data-hi="समुदाय की ताज़ा खबरें">
+                        Latest from the Community
+                    </h2>
+                    <p
+                        data-en="Browse reported local developments and civic topics. Follow the source link for the full report."
+                        data-hi="स्थानीय विकास और नागरिक मुद्दों से जुड़ी खबरें देखें। पूरी जानकारी के लिए मूल समाचार स्रोत खोलें।">
+                        Browse reported local developments and civic topics. Follow the source link for the full report.
+                    </p>
+                </div>
+
+                <div class="updates-toolbar">
+                    <div class="updates-search">
+                        <label class="visually-hidden" for="updatesSearch">Search updates</label>
+                        <span aria-hidden="true">⌕</span>
+                        <input
+                            id="updatesSearch"
+                            type="search"
+                            placeholder="Search local updates..."
+                            data-placeholder-en="Search local updates..."
+                            data-placeholder-hi="स्थानीय अपडेट खोजें..."
+                            autocomplete="off">
+                    </div>
+
+                    <div class="updates-filters" role="group" aria-label="Filter updates">
+                        <button class="filter-button active" type="button" data-filter="all"
+                                data-en="All Updates" data-hi="सभी अपडेट">All Updates</button>
+                        <button class="filter-button" type="button" data-filter="development"
+                                data-en="Development" data-hi="विकास">Development</button>
+                        <button class="filter-button" type="button" data-filter="civic"
+                                data-en="Civic Issues" data-hi="नागरिक मुद्दे">Civic Issues</button>
+                        <button class="filter-button" type="button" data-filter="community"
+                                data-en="Community" data-hi="समुदाय">Community</button>
+                    </div>
+                </div>
+
+                <div class="updates-results" aria-live="polite">
+                    <span id="updatesCount">4 updates</span>
+                    <span data-en="Stories are linked to their original publishers."
+                          data-hi="खबरें उनके मूल प्रकाशकों से लिंक की गई हैं।">
+                        Stories are linked to their original publishers.
+                    </span>
+                </div>
+
+                <div class="updates-grid" id="updatesGrid">
+
+                    <!-- Story 1 -->
+                    <article class="update-card" data-category="development"
+                             data-search="pharenda old primary health centre 10 bed trauma center health hospital">
+                        <div class="update-card-top">
+                            <span class="update-category" data-en="Healthcare" data-hi="स्वास्थ्य सेवा">
+                                Healthcare
+                            </span>
+                            <span class="update-date">07 Sep 2026</span>
+                        </div>
+
+                        <div class="update-card-icon" aria-hidden="true">✚</div>
+
+                        <h3
+                            data-en="Report: 10-bed trauma centre planned at the old PHC in Pharenda"
+                            data-hi="रिपोर्ट: फरेंदा के पुराने पीएचसी में 10-बेड ट्रॉमा सेंटर की योजना">
+                            Report: 10-bed trauma centre planned at the old PHC in Pharenda
+                        </h3>
+
+                        <p
+                            data-en="A local news report describes a proposed 10-bed trauma centre at the old primary health centre in Pharenda. Check the original report for project details and subsequent updates."
+                            data-hi="स्थानीय समाचार रिपोर्ट के अनुसार फरेंदा के पुराने प्राथमिक स्वास्थ्य केंद्र में 10-बेड ट्रॉमा सेंटर प्रस्तावित है। परियोजना के विवरण और आगे की जानकारी के लिए मूल रिपोर्ट देखें।">
+                            A local news report describes a proposed 10-bed trauma centre at the old primary health centre in Pharenda. Check the original report for project details and subsequent updates.
+                        </p>
+
+                        <div class="update-card-footer">
+                            <span class="source-name">Source: Amar Ujala</span>
+                            <a href="https://www.amarujala.com/uttar-pradesh/maharajganj/a-10-bed-trauma-center-will-be-built-at-the-old-phc-in-pharenda-maharajganj-news-c-206-1-mhg1001-184624-2026-09-07"
+                               target="_blank" rel="noopener noreferrer">
+                                <span data-en="Read source" data-hi="मूल खबर पढ़ें">Read source</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Story 2 -->
+                    <article class="update-card" data-category="development"
+                             data-search="partawal pharenda four lane highway land acquisition 48 villages road project">
+                        <div class="update-card-top">
+                            <span class="update-category" data-en="Infrastructure" data-hi="बुनियादी ढाँचा">
+                                Infrastructure
+                            </span>
+                            <span class="update-date">13 Aug 2026</span>
+                        </div>
+
+                        <div class="update-card-icon" aria-hidden="true">↗</div>
+
+                        <h3
+                            data-en="Report: Land acquisition process reported for Partawal–Pharenda four-lane project"
+                            data-hi="रिपोर्ट: परतावल–फरेंदा फोरलेन परियोजना के लिए भूमि अधिग्रहण की खबर">
+                            Report: Land acquisition process reported for Partawal–Pharenda four-lane project
+                        </h3>
+
+                        <p
+                            data-en="A news report states that land acquisition was planned across 48 villages for the proposed four-lane road. Refer to the report for the stated village count and process details."
+                            data-hi="एक समाचार रिपोर्ट में प्रस्तावित फोरलेन सड़क के लिए 48 गांवों में भूमि अधिग्रहण की योजना का उल्लेख है। गांवों की संख्या और प्रक्रिया के विवरण के लिए रिपोर्ट देखें।">
+                            A news report states that land acquisition was planned across 48 villages for the proposed four-lane road. Refer to the report for the stated village count and process details.
+                        </p>
+
+                        <div class="update-card-footer">
+                            <span class="source-name">Source: Amar Ujala</span>
+                            <a href="https://www.amarujala.com/uttar-pradesh/maharajganj/land-will-be-acquired-from-48-villages-for-the-construction-of-the-partawal-pharenda-four-lane-highway-maharajganj-news-c-206-1-go11002-183248-2026-08-13"
+                               target="_blank" rel="noopener noreferrer">
+                                <span data-en="Read source" data-hi="मूल खबर पढ़ें">Read source</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Story 3 -->
+                    <article class="update-card" data-category="civic"
+                             data-search="anandnagar ward one ambedkar nagar road damaged loose gravel potholes">
+                        <div class="update-card-top">
+                            <span class="update-category" data-en="Roads & Mobility" data-hi="सड़क और आवागमन">
+                                Roads & Mobility
+                            </span>
+                            <span class="update-date">10 Sep 2026</span>
+                        </div>
+
+                        <div class="update-card-icon" aria-hidden="true">⌁</div>
+
+                        <h3
+                            data-en="Local report highlights damaged road conditions in Ambedkar Nagar ward"
+                            data-hi="स्थानीय रिपोर्ट में आंबेडकर नगर वार्ड की खराब सड़क की स्थिति का उल्लेख">
+                            Local report highlights damaged road conditions in Ambedkar Nagar ward
+                        </h3>
+
+                        <p
+                            data-en="A report describes loose road gravel and difficult travel conditions in Ward 1, Ambedkar Nagar, within Nagar Panchayat Anand Nagar. This is a reported concern; check for newer municipal updates."
+                            data-hi="रिपोर्ट में नगर पंचायत आनंद नगर के वार्ड 1, आंबेडकर नगर में उखड़ी गिट्टी और आवागमन की परेशानी का उल्लेख है। यह रिपोर्ट किया गया मुद्दा है; नए नगर पंचायत अपडेट भी देखें।">
+                            A report describes loose road gravel and difficult travel conditions in Ward 1, Ambedkar Nagar, within Nagar Panchayat Anand Nagar. This is a reported concern; check for newer municipal updates.
+                        </p>
+
+                        <div class="update-card-footer">
+                            <span class="source-name">Source: Dainik Bhaskar</span>
+                            <a href="https://bhaskardigital.com/maharajganj-loose-road-metal-adds-to-the-woes-of-ward-residents/"
+                               target="_blank" rel="noopener noreferrer">
+                                <span data-en="Read source" data-hi="मूल खबर पढ़ें">Read source</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Story 4 -->
+                    <article class="update-card" data-category="civic"
+                             data-search="pharenda anandnagar plastic waste dumping garbage water mosquitoes sanitation">
+                        <div class="update-card-top">
+                            <span class="update-category" data-en="Cleanliness" data-hi="स्वच्छता">
+                                Cleanliness
+                            </span>
+                            <span class="update-date">15 Sep 2026</span>
+                        </div>
+
+                        <div class="update-card-icon" aria-hidden="true">♻</div>
+
+                        <h3
+                            data-en="Local report raises concerns about waste dumping around Pharenda"
+                            data-hi="स्थानीय रिपोर्ट में फरेंदा क्षेत्र में कचरा फेंकने को लेकर चिंता">
+                            Local report raises concerns about waste dumping around Pharenda
+                        </h3>
+
+                        <p
+                            data-en="A local report raises concerns about plastic waste and inadequate dumping arrangements in parts of the Anand Nagar and Pharenda area. Residents should use designated collection points and follow municipal guidance."
+                            data-hi="स्थानीय रिपोर्ट में आनंद नगर और फरेंदा क्षेत्र के कुछ हिस्सों में प्लास्टिक कचरे और कचरा निस्तारण व्यवस्था को लेकर चिंता जताई गई है। नागरिक निर्धारित संग्रहण स्थलों और नगर पंचायत के निर्देशों का पालन करें।">
+                            A local report raises concerns about plastic waste and inadequate dumping arrangements in parts of the Anand Nagar and Pharenda area. Residents should use designated collection points and follow municipal guidance.
+                        </p>
+
+                        <div class="update-card-footer">
+                            <span class="source-name">Source: Dainik Bhaskar</span>
+                            <a href="https://bhaskardigital.com/maharajganj-plastic-waste-being-ding-problems-authorities-unaware/"
+                               target="_blank" rel="noopener noreferrer">
+                                <span data-en="Read source" data-hi="मूल खबर पढ़ें">Read source</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="updates-empty" id="updatesEmpty" hidden>
+                    <div aria-hidden="true">⌕</div>
+                    <h3 data-en="No matching updates" data-hi="कोई मिलता-जुलता अपडेट नहीं मिला">
+                        No matching updates
+                    </h3>
+                    <p data-en="Try another keyword or choose a different category."
+                       data-hi="दूसरा शब्द खोजें या कोई अन्य श्रेणी चुनें।">
+                        Try another keyword or choose a different category.
+                    </p>
+                </div>
+
+                <aside class="updates-note">
+                    <div class="updates-note-icon" aria-hidden="true">i</div>
+                    <div>
+                        <h3 data-en="Please verify before acting" data-hi="किसी कदम से पहले पुष्टि करें">
+                            Please verify before acting
+                        </h3>
+                        <p
+                            data-en="News articles are published by independent sources and may change as more information becomes available. For official notices, service interruptions, public contacts or government announcements, check the relevant government department or Nagar Panchayat."
+                            data-hi="समाचार स्वतंत्र प्रकाशकों द्वारा प्रकाशित किए जाते हैं और नई जानकारी मिलने पर बदल सकते हैं। आधिकारिक सूचना, सेवा बाधा, संपर्क या सरकारी घोषणा के लिए संबंधित सरकारी विभाग या नगर पंचायत से पुष्टि करें।">
+                            News articles are published by independent sources and may change as more information becomes available. For official notices, service interruptions, public contacts or government announcements, check the relevant government department or Nagar Panchayat.
+                        </p>
+                        <a href="https://maharajganj.nic.in/" target="_blank" rel="noopener noreferrer">
+                            <span data-en="Maharajganj District Official Website" data-hi="महराजगंज जिला आधिकारिक वेबसाइट">
+                                Maharajganj District Official Website
+                            </span>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared website footer -->
+   <!-- ================= FOOTER ================= -->
+<!-- Same footer structure as the Events page -->
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand-column">
+            <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+</a>
+
+            <p data-i18n="footerDescription">
+                A community-focused city portal for discovering Anand Nagar
+                and staying connected with local information.
+            </p>
+        </div>
+
+        <div class="footer-links-column">
+            <h3 data-i18n="footerExploreTitle">Explore</h3>
+            <a href="about.html" data-i18n="navAbout">About</a>
+            <a href="explore.html" data-i18n="navExplore">Explore</a>
+            <a href="events.html" data-i18n="navEvents">Events</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3 data-i18n="footerUsefulTitle">Useful Links</h3>
+            <a href="directory.html" data-i18n="navDirectory">Directory</a>
+            <a href="transport.html" data-i18n="navTransport">Transport</a>
+            <a href="contact.html" data-i18n="navContact">Contact</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3 data-i18n="footerLocationTitle">Location</h3>
+            <p data-i18n="location">Maharajganj, Uttar Pradesh</p>
+            <p data-i18n="country">India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+
+            <span>
+                © <span id="currentYear"></span>
+                <span data-i18n="copyright">
+                    Anand Nagar. All rights reserved.
+                </span>
+            </span>
+
+            <span data-i18n="footerMadeFor">
+                Made for the community.
+            </span>
+
+        </div>
+    </div>
+
+</footer>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/updates.js"></script>
+</body>
+</html>

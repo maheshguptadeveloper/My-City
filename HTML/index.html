@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anand Nagar | Discover Your Town</title>
+    <meta name="description"
+          content="Discover Anand Nagar, Pharenda, Uttar Pradesh. Explore local places, community information and useful city resources.">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- External JavaScript -->
+   <script src="../Js/main.js" defer></script>
+ <script src="../Js/hero.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span data-i18n="announcement">
+                Welcome to the Anand Nagar City Portal
+            </span>
+            <span class="announcement-location">
+                <span aria-hidden="true">📍</span>
+                <span data-i18n="location">Maharajganj, Uttar Pradesh</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+   <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+
+</a>
+
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html" class="nav-link active" data-i18n="navHome">
+                    Home
+                </a>
+
+                <a href="#about" class="nav-link" data-i18n="navAbout">
+                    About
+                </a>
+
+                <a href="#explore" class="nav-link" data-i18n="navExplore">
+                    Explore
+                </a>
+
+                <a href="#events" class="nav-link" data-i18n="navEvents">
+                    Events
+                </a>
+
+                <a href="#directory" class="nav-link" data-i18n="navDirectory">
+                    Directory
+                </a>
+
+                <a href="#contact" class="nav-link" data-i18n="navContact">
+                    Contact
+                </a>
+            </nav>
+
+            <button class="language-button"
+                    id="languageButton"
+                    type="button"
+                    aria-label="Switch language">
+                हिन्दी
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background" id="heroBackground" aria-hidden="true">
+    <div class="hero-slide hero-slide-active"></div>
+    <div class="hero-slide"></div>
+</div>
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+
+                    <span class="hero-eyebrow">
+                        <span class="eyebrow-line"></span>
+                        <span data-i18n="heroEyebrow">
+                            A PLACE TO DISCOVER
+                        </span>
+                    </span>
+
+                    <h1>
+                        <span data-i18n="heroTitleLine1">
+                            Discover the charm of
+                        </span>
+                        <span class="hero-highlight" data-i18n="heroTitleLine2">
+                            Anand Nagar.
+                        </span>
+                    </h1>
+
+                    <p class="hero-description" data-i18n="heroDescription">
+                        Explore local places, discover community events, find
+                        useful services and stay connected with everything
+                        happening around your town.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#explore" class="button button-primary">
+                            <span data-i18n="heroExploreButton">
+                                Explore the Town
+                            </span>
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#about" class="button button-outline">
+                            <span data-i18n="heroAboutButton">
+                                Discover Our Story
+                            </span>
+                        </a>
+                    </div>
+
+                    <form class="hero-search" id="heroSearchForm">
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+
+                        <input
+                            type="search"
+                            id="citySearchInput"
+                            data-i18n-placeholder="searchPlaceholder"
+                            placeholder="Search places, services..."
+                            aria-label="Search Anand Nagar">
+
+                        <button type="submit">
+                            <span data-i18n="searchButton">Search</span>
+                            <span aria-hidden="true">→</span>
+                        </button>
+                    </form>
+
+                </div>
+
+                <div class="hero-caption">
+                    <span data-i18n="heroCaption">
+                        YOUR TOWN. YOUR STORIES. YOUR COMMUNITY.
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links-section">
+            <div class="container quick-links-grid">
+
+                <a href="#explore" class="quick-link-card">
+                    <span class="quick-link-icon" aria-hidden="true">⌖</span>
+                    <span data-i18n="quickExplore">Explore Places</span>
+                    <span class="quick-link-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="#events" class="quick-link-card">
+                    <span class="quick-link-icon" aria-hidden="true">▦</span>
+                    <span data-i18n="quickEvents">Local Events</span>
+                    <span class="quick-link-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="#directory" class="quick-link-card">
+                    <span class="quick-link-icon" aria-hidden="true">▤</span>
+                    <span data-i18n="quickDirectory">Local Directory</span>
+                    <span class="quick-link-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="#transport" class="quick-link-card">
+                    <span class="quick-link-icon" aria-hidden="true">⇄</span>
+                    <span data-i18n="quickTransport">Transport</span>
+                    <span class="quick-link-arrow" aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-image-column">
+                    <div class="about-image image-placeholder">
+                        <img src="../Images/Anand Nagar Junction Station Entrance.png"
+                             alt="Anand Nagar town"
+                             onerror="this.style.display='none';">
+                        <span class="image-fallback-label" data-i18n="townImageFallback">
+                            Anand Nagar
+                        </span>
+                    </div>
+
+                    <div class="about-image-badge">
+                        <span class="badge-number">01</span>
+                        <span data-i18n="aboutBadge">Our Town, Our Pride</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="section-eyebrow" data-i18n="aboutEyebrow">
+                        A LITTLE ABOUT US
+                    </span>
+
+                    <h2 data-i18n="aboutTitle">
+                        A town with its own story.
+                    </h2>
+
+                    <p data-i18n="aboutParagraph1">
+                        Known as Pharenda or Anandnagar, Anand Nagar is a town
+                        in Maharajganj district, Uttar Pradesh. Located in
+                        northern India near the Nepal border, it is
+                        approximately 44 kilometres north of Gorakhpur.
+                    </p>
+
+                    <p data-i18n="aboutParagraph2">
+                        This city portal brings useful local information
+                        together in one place, helping residents and visitors
+                        discover the town, explore nearby places and stay
+                        connected with the community.
+                    </p>
+
+                   <a href="about.html" class="text-link">
+    <span data-i18n="aboutLink">Know More About Pharenda</span>
+    <span aria-hidden="true">→</span>
+</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- City Facts -->
+        <section class="section city-facts-section" id="cityFacts">
+            <div class="container">
+
+                <div class="section-heading centered">
+                    <span class="section-eyebrow" data-i18n="factsEyebrow">
+                        KNOW YOUR TOWN
+                    </span>
+
+                    <h2 data-i18n="factsTitle">
+                        Pharenda at a glance.
+                    </h2>
+
+                    <p data-i18n="factsDescription">
+                        A few facts about Anand Nagar and its place in the region.
+                    </p>
+                </div>
+
+                <div class="city-facts-grid">
+
+                    <article class="city-fact-card">
+                        <span class="fact-icon" aria-hidden="true">⌖</span>
+                        <span class="fact-label" data-i18n="factDistrictLabel">
+                            DISTRICT
+                        </span>
+                        <h3 data-i18n="factDistrictValue">Maharajganj</h3>
+                        <p data-i18n="factDistrictDetail">Uttar Pradesh, India</p>
+                    </article>
+
+                    <article class="city-fact-card">
+                        <span class="fact-icon" aria-hidden="true">↗</span>
+                        <span class="fact-label" data-i18n="factLocationLabel">
+                            LOCATION
+                        </span>
+                        <h3 data-i18n="factLocationValue">Near Nepal</h3>
+                        <p data-i18n="factLocationDetail">
+                            Northern Uttar Pradesh
+                        </p>
+                    </article>
+
+                    <article class="city-fact-card">
+                        <span class="fact-icon" aria-hidden="true">⇢</span>
+                        <span class="fact-label" data-i18n="factDistanceLabel">
+                            APPROX. DISTANCE
+                        </span>
+                        <h3 data-i18n="factDistanceValue">44 km</h3>
+                        <p data-i18n="factDistanceDetail">
+                            North of Gorakhpur
+                        </p>
+                    </article>
+
+                    <article class="city-fact-card">
+                        <span class="fact-icon" aria-hidden="true">◉</span>
+                        <span class="fact-label" data-i18n="factElevationLabel">
+                            ELEVATION
+                        </span>
+                        <h3 data-i18n="factElevationValue">88 metres</h3>
+                        <p data-i18n="factElevationDetail">
+                            Above sea level
+                        </p>
+                    </article>
+
+                </div>
+
+                <p class="source-note" data-i18n="factsSource">
+                    Geographic details are approximate. Source: Wikipedia's
+                    Pharenda article.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Explore Section -->
+        <section class="section explore-section" id="explore">
+            <div class="container">
+
+                <div class="section-heading section-heading-row">
+                    <div>
+                        <span class="section-eyebrow" data-i18n="exploreEyebrow">
+                            PLACES & EXPERIENCES
+                        </span>
+
+                        <h2 data-i18n="exploreTitle">
+                            Explore Anand Nagar.
+                        </h2>
+
+                        <p data-i18n="exploreDescription">
+                            Discover places and experiences around your town.
+                        </p>
+                    </div>
+
+                    <a href="#explore" class="text-link desktop-link">
+                        <span data-i18n="exploreAll">Explore All</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+                <div class="places-grid">
+
+                    <!-- Place 1 -->
+                    <article class="place-card">
+                        <div class="place-image-wrapper">
+                            <img src="../Images/Temple Courtyard with Market Stalls.png"
+                                 alt="Lehara Devi Temple"
+                                 class="place-image"
+                                 loading="lazy"
+                                 onerror="this.style.display='none';">
+
+                            <span class="place-image-fallback" data-i18n="templeImageFallback">
+                                Nearby Temple
+                            </span>
+
+                            <span class="place-category" data-i18n="placeCategoryNearby">
+                                NEARBY PLACE
+                            </span>
+                        </div>
+
+                        <div class="place-card-content">
+                            <span class="place-number">01 / 03</span>
+
+                            <h3 data-i18n="templeTitle">
+                                Lehara Devi Temple
+                            </h3>
+
+                            <p data-i18n="templeDescription">
+                                A temple dedicated to Durga Devi, located near
+                                Anand Nagar and known locally as Lehara Devi Mandir.
+                            </p>
+
+            <a href="explore.html#temples" class="card-link">
+    <span data-i18n="learnMore">Learn More</span>
+    <span aria-hidden="true">→</span>
+</a>
+                        </div>
+                    </article>
+
+                    <!-- Place 2 -->
+                    <article class="place-card">
+                        <div class="place-image-wrapper">
+                            <img src="../Images/Anand Nagar Junction Station Entrance.png"
+                                 alt="Anand Nagar Junction railway station"
+                                 class="place-image"
+                                 loading="lazy"
+                                 onerror="this.style.display='none';">
+
+                            <span class="place-image-fallback" data-i18n="railwayImageFallback">
+                                Anand Nagar Junction
+                            </span>
+
+                            <span class="place-category" data-i18n="placeCategoryTransport">
+                                TRANSPORT
+                            </span>
+                        </div>
+
+                        <div class="place-card-content">
+                            <span class="place-number">02 / 03</span>
+
+                            <h3 data-i18n="railwayTitle">
+                                Anand Nagar Junction
+                            </h3>
+
+                            <p data-i18n="railwayDescription">
+                                The railway station serves Pharenda and connects
+                                the town with regional rail routes. Check current
+                                train information before travelling.
+                            </p>
+
+                         <a href="explore.html#transport" class="card-link"
+   data-en="Travel Information"
+   data-hi="यात्रा की जानकारी">
+    Travel Information
+    <span aria-hidden="true">→</span>
+</a>
+                        </div>
+                    </article>
+
+                    <!-- Place 3 -->
+                    <article class="place-card">
+                        <div class="place-image-wrapper">
+                            <img src="../Images/Vibrant Indian Street Market.png"
+                                 alt="Anand Nagar town and surrounding area"
+                                 class="place-image"
+                                 loading="lazy"
+                                 onerror="this.style.display='none';">
+
+                            <span class="place-image-fallback" data-i18n="townImageFallback">
+                                Anand Nagar
+                            </span>
+
+                            <span class="place-category" data-i18n="placeCategoryLocal">
+                                LOCAL LIFE
+                            </span>
+                        </div>
+
+                        <div class="place-card-content">
+                            <span class="place-number">03 / 03</span>
+
+                            <h3 data-i18n="localLifeTitle">
+                                Discover Local Life
+                            </h3>
+
+                            <p data-i18n="localLifeDescription">
+                                Explore the town, its neighbourhoods and nearby
+                                markets. Add verified local recommendations as
+                                the portal grows.
+                            </p>
+
+                            <a href="explore.html#local-life" class="card-link">
+    <span data-en="Discover More"
+          data-hi="और जानें">
+        Discover More
+    </span>
+    <span aria-hidden="true">→</span>
+</a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="section events-section" id="events">
+            <div class="container events-content">
+
+                <div class="events-copy">
+                    <span class="section-eyebrow" data-i18n="eventsEyebrow">
+                        COMMUNITY & CONNECTION
+                    </span>
+
+                    <h2 data-i18n="eventsTitle">
+                        What's happening around town?
+                    </h2>
+
+                    <p data-i18n="eventsDescription">
+                        Stay connected with local celebrations, community
+                        gatherings and upcoming events. Event listings will be
+                        added as verified information becomes available.
+                    </p>
+
+                    <a href="#contact" class="button button-primary">
+                        <span data-i18n="eventsButton">Share an Event</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+                <div class="events-art" aria-hidden="true">
+                    <div class="event-art-circle circle-one"></div>
+                    <div class="event-art-circle circle-two"></div>
+                    <div class="event-art-content">
+                        <span class="event-art-symbol">✳</span>
+                        <span data-i18n="eventsArtText">Together in Community</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Directory Section -->
+        <section class="section directory-section" id="directory">
+            <div class="container">
+
+                <div class="section-heading centered">
+                    <span class="section-eyebrow" data-i18n="directoryEyebrow">
+                        LOCAL CONNECTIONS
+                    </span>
+
+                    <h2 data-i18n="directoryTitle">
+                        Find what you need.
+                    </h2>
+
+                    <p data-i18n="directoryDescription">
+                        A future directory for useful local services and
+                        community resources.
+                    </p>
+                </div>
+
+                <div class="directory-grid">
+
+                    <div class="directory-card">
+                        <span class="directory-icon" aria-hidden="true">✚</span>
+                        <h3 data-i18n="directoryHealth">Healthcare</h3>
+                        <p data-i18n="directoryHealthDesc">
+                            Hospitals, clinics and healthcare services.
+                        </p>
+                    </div>
+
+                    <div class="directory-card">
+                        <span class="directory-icon" aria-hidden="true">▤</span>
+                        <h3 data-i18n="directoryEducation">Education</h3>
+                        <p data-i18n="directoryEducationDesc">
+                            Schools, colleges and learning resources.
+                        </p>
+                    </div>
+
+                    <div class="directory-card">
+                        <span class="directory-icon" aria-hidden="true">⌂</span>
+                        <h3 data-i18n="directoryBusiness">Local Businesses</h3>
+                        <p data-i18n="directoryBusinessDesc">
+                            Shops, services and local businesses.
+                        </p>
+                    </div>
+
+                    <div class="directory-card">
+                        <span class="directory-icon" aria-hidden="true">⇄</span>
+                        <h3 data-i18n="directoryTransport">Transport</h3>
+                        <p data-i18n="directoryTransportDesc">
+                            Local and regional travel information.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p class="directory-note" data-i18n="directoryNote">
+                    Directory listings are sample categories. Verified local
+                    listings can be added later.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Transport Section -->
+        <section class="transport-strip" id="transport">
+            <div class="container transport-inner">
+                <div>
+                    <span class="section-eyebrow" data-i18n="transportEyebrow">
+                        GETTING AROUND
+                    </span>
+
+                    <h2 data-i18n="transportTitle">
+                        Plan your journey.
+                    </h2>
+
+                    <p data-i18n="transportDescription">
+                        Find useful travel information for Anand Nagar and
+                        nearby destinations.
+                    </p>
+                </div>
+
+                <a href="#contact" class="button button-light">
+                    <span data-i18n="transportButton">Transport Information</span>
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-box">
+
+                <div>
+                    <span class="section-eyebrow" data-i18n="contactEyebrow">
+                        BE PART OF THE STORY
+                    </span>
+
+                    <h2 data-i18n="contactTitle">
+                        Have something to share?
+                    </h2>
+
+                    <p data-i18n="contactDescription">
+                        Help make this city portal more useful by sharing
+                        suggestions, local information or community updates.
+                    </p>
+                </div>
+
+               <a href="contact.html" class="button button-primary">
+    <span data-i18n="contactButton">Get in Touch</span>
+    <span aria-hidden="true">→</span>
+</a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-main">
+
+            <div class="footer-brand-column">
+                <a href="index.html" class="brand" aria-label="Anand Nagar Home">
+
+    <img
+        src="../Images/Sustainable Cityscape A Emblem.png"
+        alt="Anand Nagar Logo"
+        class="brand-image">
+
+    <div class="brand-copy">
+        <span class="brand-name">Anand Nagar</span>
+        <span class="brand-tagline">DISCOVER · CONNECT · BELONG</span>
+    </div>
+
+</a>
+
+                <p data-i18n="footerDescription">
+                    A community-focused city portal for discovering Anand Nagar
+                    and staying connected with local information.
+                </p>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerExploreTitle">Explore</h3>
+                <a href="#about" data-i18n="navAbout">About</a>
+                <a href="#explore" data-i18n="navExplore">Explore</a>
+                <a href="#events" data-i18n="navEvents">Events</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerUsefulTitle">Useful Links</h3>
+                <a href="#directory" data-i18n="navDirectory">Directory</a>
+                <a href="#transport" data-i18n="navTransport">Transport</a>
+                <a href="#contact" data-i18n="navContact">Contact</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 data-i18n="footerLocationTitle">Location</h3>
+                <p data-i18n="location">Maharajganj, Uttar Pradesh</p>
+                <p data-i18n="country">India</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span>
+                    © <span id="currentYear"></span>
+                    <span data-i18n="copyright">Anand Nagar. All rights reserved.</span>
+                </span>
+
+                <span data-i18n="footerMadeFor">
+                    Made for the community.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
