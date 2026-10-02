@@ -697,30 +697,24 @@
 </div>
     </footer>
 
-    <!-- GoatCounter visitor tracking -->
-<script>
-    // Wait until GoatCounter's visitor-count function is available.
-    (function () {
-        const counterTimer = setInterval(function () {
-            if (
-                window.goatcounter &&
-                typeof window.goatcounter.visit_count === "function"
-            ) {
-                clearInterval(counterTimer);
+  <script>
+    const counterTimer = setInterval(function () {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(counterTimer);
 
-                window.goatcounter.visit_count({
-                    append: "#visitor-count",
-                    path: "TOTAL"
-                });
-            }
-        }, 100);
-    })();
+            window.goatcounter.visit_count({
+                append: "#visitor-count",
+                path: "TOTAL"
+            });
+        }
+    }, 100);
 </script>
 
 <script
-  data-goatcounter="https://anandnagarcity.goatcounter.com/count"
-  async
-  src="https://gc.zgo.at/count.js">
+    data-goatcounter="https://anandnagarcity.goatcounter.com/count"
+    async
+    src="https://gc.zgo.at/count.js">
+</script>
 </script>
 
 </body>
