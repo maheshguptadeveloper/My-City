@@ -691,30 +691,33 @@
             </div>
         </div>
 
-        <div class="visitor-counter">
-    <span>Website Visitors:</span>
-    <span id="visitor-count">Loading...</span>
+       <div class="visitor-counter">
+    <span class="visitor-counter-label">Website Visitors</span>
+    <strong id="visitor-count">Loading...</strong>
+    <span class="visitor-counter-caption">Thank you for visiting Anand Nagar</span>
+</div>
 </div>
     </footer>
 
-  <script>
-    const counterTimer = setInterval(function () {
+ <script>
+    function loadVisitorCount() {
         if (window.goatcounter && window.goatcounter.visit_count) {
-            clearInterval(counterTimer);
-
             window.goatcounter.visit_count({
                 append: "#visitor-count",
                 path: "TOTAL"
             });
+        } else {
+            setTimeout(loadVisitorCount, 200);
         }
-    }, 100);
+    }
+
+    loadVisitorCount();
 </script>
 
 <script
     data-goatcounter="https://anandnagarcity.goatcounter.com/count"
     async
     src="https://gc.zgo.at/count.js">
-</script>
 </script>
 
 </body>
