@@ -1718,4 +1718,18 @@ html[lang="hi"] .place-category {
     border: 1px solid var(--border, #D8DDCF);
     background: var(--cream, #F5F3E9);
 }
+
+.visitor-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 15px auto;
+    color: var(--muted, #667085);
+    font-size: 14px;
+}
+
+.visitor-counter #visitor-count {
+    color: var(--green, #287a64);
+    font-weight: 700;
 }
