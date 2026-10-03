@@ -1752,3 +1752,23 @@ html[lang="hi"] .place-category {
     color: #c4d2cc;
     font-size: 11px;
 }
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid #6c4cff;
+    border-radius: 8px;
+    background: #6c4cff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: #6c4cff;
+    border-color: #6c4cff;
+}
