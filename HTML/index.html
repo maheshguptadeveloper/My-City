@@ -5,27 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Anand Nagar | Discover Your Town</title>
-<!-- Google Analytics 4 (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY34LD5G2C"></script>
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'G-EY34LD5G2C');
-</script>
-
-<link rel="icon" type="image/png" href="../Images/Sustainable Cityscape A Emblem.png">
-
     <meta name="description"
           content="Discover Anand Nagar, Pharenda, Uttar Pradesh. Explore local places, community information and useful city resources.">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/diwali.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +19,9 @@
           rel="stylesheet">
 
     <!-- External JavaScript -->
-   <script src="../Js/main.js" defer></script>
- <script src="../Js/hero.js" defer></script>
+    <script src="../Js/main.js" defer></script>
+    <script src="../Js/hero.js" defer></script>
+    <script src="../Js/diwali.js" defer></script>
 
 </head>
 
@@ -59,7 +45,6 @@
         <div class="container header-inner">
 
             <a href="index.html" class="brand" aria-label="Anand Nagar Home">
-   <a href="index.html" class="brand" aria-label="Anand Nagar Home">
 
     <img
         src="../Images/Sustainable Cityscape A Emblem.png"
@@ -519,9 +504,10 @@
                         added as verified information becomes available.
                     </p>
 
-     <a href="events.html" class="button button-primary">
-    Share an Event <span aria-hidden="true">→</span>
-</a>
+                    <a href="#contact" class="button button-primary">
+                        <span data-i18n="eventsButton">Share an Event</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
                 </div>
 
                 <div class="events-art" aria-hidden="true">
@@ -555,33 +541,41 @@
                     </p>
                 </div>
 
-               <div class="directory-grid">
+                <div class="directory-grid">
 
-    <a href="directory.html#healthcare" class="directory-card">
-        <div class="directory-icon">✚</div>
-        <h3>Healthcare</h3>
-        <p>Hospitals, clinics and healthcare services.</p>
-    </a>
+                    <div class="directory-card">
+                        <span class="directory-icon" aria-hidden="true">✚</span>
+                        <h3 data-i18n="directoryHealth">Healthcare</h3>
+                        <p data-i18n="directoryHealthDesc">
+                            Hospitals, clinics and healthcare services.
+                        </p>
+                    </div>
 
-    <a href="directory.html#education" class="directory-card">
-        <div class="directory-icon">▤</div>
-        <h3>Education</h3>
-        <p>Schools, colleges and learning resources.</p>
-    </a>
+                    <div class="directory-card">
+                        <span class="directory-icon" aria-hidden="true">▤</span>
+                        <h3 data-i18n="directoryEducation">Education</h3>
+                        <p data-i18n="directoryEducationDesc">
+                            Schools, colleges and learning resources.
+                        </p>
+                    </div>
 
-    <a href="directory.html#local-businesses" class="directory-card">
-        <div class="directory-icon">⌂</div>
-        <h3>Local Businesses</h3>
-        <p>Shops, services and local businesses.</p>
-    </a>
+                    <div class="directory-card">
+                        <span class="directory-icon" aria-hidden="true">⌂</span>
+                        <h3 data-i18n="directoryBusiness">Local Businesses</h3>
+                        <p data-i18n="directoryBusinessDesc">
+                            Shops, services and local businesses.
+                        </p>
+                    </div>
 
-    <a href="transport.html" class="directory-card">
-        <div class="directory-icon">⇄</div>
-        <h3>Transport</h3>
-        <p>Local and regional travel information.</p>
-    </a>
+                    <div class="directory-card">
+                        <span class="directory-icon" aria-hidden="true">⇄</span>
+                        <h3 data-i18n="directoryTransport">Transport</h3>
+                        <p data-i18n="directoryTransportDesc">
+                            Local and regional travel information.
+                        </p>
+                    </div>
 
-</div>
+                </div>
 
                 <p class="directory-note" data-i18n="directoryNote">
                     Directory listings are sample categories. Verified local
@@ -609,10 +603,10 @@
                     </p>
                 </div>
 
-                <a href="transport.html" class="button button-light">
-    <span data-i18n="transportButton">Transport Information</span>
-    <span aria-hidden="true">→</span>
-</a>
+                <a href="#contact" class="button button-light">
+                    <span data-i18n="transportButton">Transport Information</span>
+                    <span aria-hidden="true">→</span>
+                </a>
             </div>
         </section>
 
@@ -704,11 +698,7 @@
                 </span>
             </div>
         </div>
-
-      
-</div>
     </footer>
-
 
 </body>
 </html>
