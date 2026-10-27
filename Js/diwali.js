@@ -14,9 +14,12 @@
 (function () {
     "use strict";
 
-    // Audio synthesizer for festive temple bells and firework crackles
+    // Audio synthesizer for festive temple bells, crackles, and Deep Om Chanting
     let audioCtx = null;
     let soundEnabled = true;
+    let isChanting = false;
+    let omChantInterval = null;
+    let omMasterGain = null;
 
     function getAudioContext() {
         if (!audioCtx) {
@@ -31,6 +34,7 @@
         return audioCtx;
     }
 
+    // Sacred Temple Singing Bowl / Bell Chime
     function playBellChime() {
         if (!soundEnabled) return;
         try {
@@ -38,9 +42,9 @@
             if (!ctx) return;
 
             const now = ctx.currentTime;
-            // Auspicious bell frequencies (fundamental + harmonics)
-            const freqs = [528, 1056, 1584, 2112];
-            const gains = [0.15, 0.08, 0.04, 0.02];
+            // Sacred healing harmonic frequencies (432Hz, 528Hz, and overtones)
+            const freqs = [432, 528, 1056, 1584, 2112];
+            const gains = [0.18, 0.12, 0.06, 0.03, 0.015];
 
             freqs.forEach((freq, idx) => {
                 const osc = ctx.createOscillator();
@@ -50,19 +54,20 @@
                 osc.frequency.setValueAtTime(freq, now);
 
                 gain.gain.setValueAtTime(gains[idx], now);
-                gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.2);
+                gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.2);
 
                 osc.connect(gain);
                 gain.connect(ctx.destination);
 
                 osc.start(now);
-                osc.stop(now + 2.3);
+                osc.stop(now + 3.3);
             });
         } catch (e) {
             // Audio policy graceful fallback
         }
     }
 
+    // Firework crackle burst sound
     function playFireworkSound() {
         if (!soundEnabled) return;
         try {
@@ -70,7 +75,6 @@
             if (!ctx) return;
 
             const now = ctx.currentTime;
-            // White noise crackle burst
             const bufferSize = ctx.sampleRate * 0.25;
             const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
             const data = buffer.getChannelData(0);
@@ -97,6 +101,174 @@
             noise.start(now);
         } catch (e) {
             // Audio policy graceful fallback
+        }
+    }
+
+    let availableVoices = [];
+    if ("speechSynthesis" in window) {
+        availableVoices = window.speechSynthesis.getVoices();
+        window.speechSynthesis.onvoiceschanged = () => {
+            availableVoices = window.speechSynthesis.getVoices();
+        };
+    }
+
+    // Gentle sacred prayer whisper of "ॐ नमः शिवाय"
+    function speakPrayerWhisper() {
+        if (!soundEnabled) return;
+        try {
+            if ("speechSynthesis" in window) {
+                window.speechSynthesis.cancel();
+                const utter = new SpeechSynthesisUtterance("ॐ नमः शिवाय");
+                utter.rate = 0.65; // Very slow, meditative chanting pace
+                utter.pitch = 0.62; // Deep spiritual reverberant tone
+                utter.volume = 0.70; // Clear sacred prayer volume
+
+                // Try to find a Hindi or Indian English voice
+                const voices = availableVoices.length ? availableVoices : window.speechSynthesis.getVoices();
+                const voice = voices.find(v => v.lang.includes("hi") || v.lang.includes("IN") || v.name.toLowerCase().includes("india") || v.lang.includes("sa"));
+                if (voice) {
+                    utter.voice = voice;
+                }
+                window.speechSynthesis.speak(utter);
+            }
+        } catch (e) {
+            // Fallback gracefully
+        }
+    }
+
+    // ========================================================
+    // DEEP SACRED "OOOOOOOMMMMM" & PRAYER CHANT SYNTHESIZER
+    // ========================================================
+    function startDeepOmChant() {
+        if (!soundEnabled || isChanting) return;
+        const ctx = getAudioContext();
+        if (!ctx) return;
+
+        try {
+            isChanting = true;
+
+            if (!omMasterGain) {
+                omMasterGain = ctx.createGain();
+                omMasterGain.connect(ctx.destination);
+            }
+
+            const now = ctx.currentTime;
+            omMasterGain.gain.setValueAtTime(0.001, now);
+            omMasterGain.gain.linearRampToValueAtTime(0.24, now + 1.8);
+
+            // Single Deep Vocal "Oooohhhhm" Prayer Breath Cycle
+            function chantCycle() {
+                if (!isChanting || !soundEnabled) return;
+                const t = ctx.currentTime;
+                const cycleDur = 9.8; // seconds per breath cycle
+
+                // Cosmic Om Fundamental: 136.1Hz with warm Sub-bass 68.05Hz
+                const oscMain1 = ctx.createOscillator();
+                const oscMain2 = ctx.createOscillator();
+                const oscSub = ctx.createOscillator();
+                const oscFifth = ctx.createOscillator();
+
+                oscMain1.type = "sawtooth";
+                oscMain1.frequency.setValueAtTime(136.1, t); // C#3 Primordial OM frequency
+
+                oscMain2.type = "sawtooth";
+                oscMain2.frequency.setValueAtTime(136.4, t); // Chorus shimmer detune
+
+                oscSub.type = "sine";
+                oscSub.frequency.setValueAtTime(68.05, t); // Deep chest sub-bass
+
+                oscFifth.type = "sine";
+                oscFifth.frequency.setValueAtTime(204.15, t); // Sacred harmonic 5th
+
+                // Formant 1: Throat resonance ("Oooo" 480Hz -> "Mmmm" 250Hz)
+                const filter1 = ctx.createBiquadFilter();
+                filter1.type = "bandpass";
+                filter1.Q.setValueAtTime(4.2, t);
+                filter1.frequency.setValueAtTime(480, t);
+                filter1.frequency.setValueAtTime(480, t + 4.8);
+                filter1.frequency.exponentialRampToValueAtTime(250, t + 7.2);
+
+                // Formant 2: Mouth/Chest resonance ("Oooo" 880Hz -> "Mmmm" 320Hz)
+                const filter2 = ctx.createBiquadFilter();
+                filter2.type = "bandpass";
+                filter2.Q.setValueAtTime(4.8, t);
+                filter2.frequency.setValueAtTime(880, t);
+                filter2.frequency.setValueAtTime(880, t + 4.8);
+                filter2.frequency.exponentialRampToValueAtTime(320, t + 7.2);
+
+                // Vocal Breathing Envelope (Inhale -> "Ooooo" -> "Mmmmm" -> Fade)
+                const vocalGain = ctx.createGain();
+                vocalGain.gain.setValueAtTime(0.0001, t);
+                vocalGain.gain.linearRampToValueAtTime(0.38, t + 2.2); // Full rich "Ooooo"
+                vocalGain.gain.setValueAtTime(0.38, t + 5.2);
+                vocalGain.gain.linearRampToValueAtTime(0.24, t + 7.8); // Resonant "Mmmm"
+                vocalGain.gain.exponentialRampToValueAtTime(0.0001, t + cycleDur - 0.3);
+
+                // Meditative Tanpura String Drone
+                const tanpuraOsc = ctx.createOscillator();
+                const tanpuraGain = ctx.createGain();
+                tanpuraOsc.type = "triangle";
+                tanpuraOsc.frequency.setValueAtTime(136.1, t);
+                tanpuraGain.gain.setValueAtTime(0.07, t);
+
+                // Connect audio routing
+                oscMain1.connect(filter1);
+                oscMain2.connect(filter1);
+                oscMain1.connect(filter2);
+                oscMain2.connect(filter2);
+                oscSub.connect(vocalGain);
+                oscFifth.connect(vocalGain);
+
+                filter1.connect(vocalGain);
+                filter2.connect(vocalGain);
+                tanpuraOsc.connect(tanpuraGain);
+
+                vocalGain.connect(omMasterGain);
+                tanpuraGain.connect(omMasterGain);
+
+                // Start chant breath
+                oscMain1.start(t);
+                oscMain2.start(t);
+                oscSub.start(t);
+                oscFifth.start(t);
+                tanpuraOsc.start(t);
+
+                oscMain1.stop(t + cycleDur);
+                oscMain2.stop(t + cycleDur);
+                oscSub.stop(t + cycleDur);
+                oscFifth.stop(t + cycleDur);
+                tanpuraOsc.stop(t + cycleDur);
+
+                // Auspicious singing bowl chime at cycle start
+                playBellChime();
+
+                // Periodic sacred chant whisper
+                setTimeout(speakPrayerWhisper, 2200);
+            }
+
+            chantCycle();
+            if (omChantInterval) clearInterval(omChantInterval);
+            omChantInterval = setInterval(chantCycle, 9800);
+
+        } catch (e) {
+            // Graceful fallback
+        }
+    }
+
+    function stopDeepOmChant() {
+        isChanting = false;
+        if (omChantInterval) {
+            clearInterval(omChantInterval);
+            omChantInterval = null;
+        }
+        if (omMasterGain && audioCtx) {
+            try {
+                const now = audioCtx.currentTime;
+                omMasterGain.gain.linearRampToValueAtTime(0.0001, now + 1.2);
+            } catch (e) { }
+        }
+        if ("speechSynthesis" in window) {
+            try { window.speechSynthesis.cancel(); } catch (e) { }
         }
     }
 
@@ -275,14 +447,40 @@
         </svg>
     `;
 
-    // SVG Corner Accents
-    const SVG_CORNER = `
-        <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 5 H30 C40 5 45 10 45 20 V45" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
-            <path d="M10 10 H25 C32 10 35 13 35 20 V35" stroke="#ffb300" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="5" cy="5" r="3.5" fill="#ffd700"/>
-            <circle cx="45" cy="45" r="2.5" fill="#ff9100"/>
-            <path d="M15 15 Q25 25 15 35 Q25 25 35 15" stroke="#ff6f00" stroke-width="1.2" fill="none"/>
+    // Sacred Rotating Om (ॐ) Corner Emblem
+    const SVG_OM_CORNER = `
+        <svg class="diwali-om-spinner" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <radialGradient id="omGlowGrad" cx="50%" cy="50%" r="50%">
+                    <stop stop-color="#ffd700" stop-opacity="0.8"/>
+                    <stop offset="60%" stop-color="#ff9100" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#ff6f00" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <!-- Radiant Background Glow Disc -->
+            <circle cx="30" cy="30" r="28" fill="url(#omGlowGrad)"/>
+            <!-- Outer Golden Beaded / Rays Ring -->
+            <circle cx="30" cy="30" r="26" stroke="#ffd700" stroke-width="1.6" stroke-dasharray="3.5 2.5"/>
+            <circle cx="30" cy="30" r="22" stroke="#ffb300" stroke-width="1"/>
+            
+            <!-- 8 Divine Sunburst Solar Rays -->
+            <g stroke="#ff9100" stroke-width="1.5" stroke-linecap="round" opacity="0.9">
+                <line x1="30" y1="2" x2="30" y2="7"/>
+                <line x1="30" y1="53" x2="30" y2="58"/>
+                <line x1="2" y1="30" x2="7" y2="30"/>
+                <line x1="53" y1="30" x2="58" y2="30"/>
+                <line x1="10" y1="10" x2="14" y2="14"/>
+                <line x1="46" y1="46" x2="50" y2="50"/>
+                <line x1="50" y1="10" x2="46" y2="14"/>
+                <line x1="14" y1="46" x2="10" y2="50"/>
+            </g>
+
+            <!-- Center Gold Medallion Core -->
+            <circle cx="30" cy="30" r="17.5" fill="url(#deityGoldGrad)" stroke="#ffd700" stroke-width="1.2"/>
+            <circle cx="30" cy="30" r="14.5" stroke="#ff8f00" stroke-width="0.8" stroke-dasharray="2 1.5"/>
+
+            <!-- Sacred ॐ (Om) Symbol in Holy Vermilion Red with Gold Edge -->
+            <text x="30" y="32" font-family="'Noto Sans Devanagari', 'DM Sans', serif" font-size="20" font-weight="900" text-anchor="middle" dominant-baseline="central" fill="#b71c1c" stroke="#ffe082" stroke-width="0.5">ॐ</text>
         </svg>
     `;
 
@@ -295,15 +493,15 @@
             <circle cx="100" cy="100" r="30" stroke="#ffd700" stroke-width="2"/>
             <g stroke="#ffd700" stroke-width="1.2" opacity="0.8">
                 ${Array.from({ length: 12 }).map((_, i) => {
-                    const angle = i * 30;
-                    return `<path d="M100 25 C115 50 115 70 100 85 C85 70 85 50 100 25 Z" transform="rotate(${angle} 100 100)"/>`;
-                }).join("")}
+        const angle = i * 30;
+        return `<path d="M100 25 C115 50 115 70 100 85 C85 70 85 50 100 25 Z" transform="rotate(${angle} 100 100)"/>`;
+    }).join("")}
             </g>
             <g stroke="#ffab00" stroke-width="1" opacity="0.7">
                 ${Array.from({ length: 12 }).map((_, i) => {
-                    const angle = i * 30 + 15;
-                    return `<circle cx="100" cy="45" r="4" fill="#ff6f00" transform="rotate(${angle} 100 100)"/>`;
-                }).join("")}
+        const angle = i * 30 + 15;
+        return `<circle cx="100" cy="45" r="4" fill="#ff6f00" transform="rotate(${angle} 100 100)"/>`;
+    }).join("")}
             </g>
         </svg>
     `;
@@ -367,20 +565,20 @@
         <svg class="diwali-toran-svg" viewBox="0 0 1000 42" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 4 Q250 20 500 4 Q750 20 1000 4" stroke="#ffb300" stroke-width="2.5" fill="none"/>
             ${Array.from({ length: 23 }).map((_, i) => {
-                const x = i * 44 + 8;
-                const isFlower = i % 2 === 0;
-                if (isFlower) {
-                    return `
+        const x = i * 44 + 8;
+        const isFlower = i % 2 === 0;
+        if (isFlower) {
+            return `
                         <circle cx="${x}" cy="14" r="7" fill="#ff6f00"/>
                         <circle cx="${x}" cy="14" r="4.5" fill="#ffb300"/>
                         <circle cx="${x}" cy="14" r="1.8" fill="#ffe082"/>
                     `;
-                } else {
-                    return `
+        } else {
+            return `
                         <path d="M${x} 6 C${x + 5} 16 ${x + 7} 30 ${x} 38 C${x - 7} 30 ${x - 5} 16 ${x} 6 Z" fill="#2e7d32" stroke="#1b5e20" stroke-width="0.8"/>
                     `;
-                }
-            }).join("")}
+        }
+    }).join("")}
         </svg>
     `;
 
@@ -419,21 +617,42 @@
 
             <!-- Main Festive Greeting Card -->
             <div class="diwali-card" id="diwaliCard">
-                <!-- Corner Accents -->
-                <div class="diwali-corner-accent top-left">${SVG_CORNER}</div>
-                <div class="diwali-corner-accent top-right">${SVG_CORNER}</div>
-                <div class="diwali-corner-accent bottom-left">${SVG_CORNER}</div>
-                <div class="diwali-corner-accent bottom-right">${SVG_CORNER}</div>
+                <!-- Animated Sacred Om (ॐ) Marquee Border Running on All 4 Sides -->
+                <div class="diwali-card-border-marquee" aria-hidden="true">
+                    <div class="diwali-marquee-track top">
+                        <span>ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦</span>
+                        <span>ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦</span>
+                    </div>
+                    <div class="diwali-marquee-track bottom">
+                        <span>ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦</span>
+                        <span>ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦</span>
+                    </div>
+                    <div class="diwali-marquee-track left">
+                        <span>ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ</span>
+                        <span>ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ</span>
+                    </div>
+                    <div class="diwali-marquee-track right">
+                        <span>ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ</span>
+                        <span>ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ ✦ ॐ ✨ ॐ</span>
+                    </div>
+                </div>
+
+                <!-- Sacred Rotating Om (ॐ) Emblems on the 4 Sides (Top, Bottom, Left, Right - NOT in corners) -->
+                <div class="diwali-om-side top" title="ॐ">${SVG_OM_CORNER}</div>
+                <div class="diwali-om-side bottom" title="ॐ">${SVG_OM_CORNER}</div>
+                <div class="diwali-om-side left" title="ॐ">${SVG_OM_CORNER}</div>
+                <div class="diwali-om-side right" title="ॐ">${SVG_OM_CORNER}</div>
 
                 <!-- Rotating Mandala in BG -->
                 <div class="diwali-mandala-bg">${SVG_MANDALA}</div>
 
-                <!-- Card Header Bar (Non-overlapping Flex Row) -->
+                <!-- Card Header Bar (Corner Credit | Portal Badge | Controls) -->
                 <div class="diwali-card-header">
-                    <button type="button" class="diwali-sound-btn" id="diwaliSoundBtn" title="Toggle Festive Sound">
-                        <span id="soundIcon">🔔</span>
-                        <span id="soundLabel">Sound</span>
-                    </button>
+                    <div class="diwali-corner-credit" title="Diwali Greetings by Mahesh Gupta">
+                        <span class="corner-by-label">by</span>
+                        <span class="corner-by-name">Mahesh Gupta</span>
+                        <span class="corner-by-sparkle">✨</span>
+                    </div>
 
                     <div class="diwali-portal-badge">
                         <span>✨</span>
@@ -441,7 +660,10 @@
                         <span>✨</span>
                     </div>
 
-                    <button type="button" class="diwali-close-btn" id="diwaliCloseBtn" aria-label="Close Diwali Greeting">✕</button>
+                    <div class="diwali-header-controls">
+                        <button type="button" class="diwali-sound-toggle-btn" id="diwaliSoundToggle" title="ॐ Sound ON / OFF" aria-label="Toggle Sound">🔊</button>
+                        <button type="button" class="diwali-close-btn" id="diwaliCloseBtn" aria-label="Close Diwali Greeting">✕</button>
+                    </div>
                 </div>
 
                 <!-- Sacred Divine Altar: Lord Ganesha, Flaming Diya, Maa Lakshmi -->
@@ -502,6 +724,13 @@
                         <span>➔</span>
                     </button>
                 </div>
+
+                <!-- Bottom Corner Signature Credit by Mahesh Gupta -->
+                <div class="diwali-card-corner-credit">
+                    <span class="diwali-credit-sparkle">✨</span>
+                    <span class="diwali-credit-text">Celebration & Wishes by <strong class="diwali-credit-author">Mahesh Gupta</strong></span>
+                    <span class="diwali-credit-sparkle">✨</span>
+                </div>
             </div>
         `;
 
@@ -543,7 +772,9 @@
         if (overlay) {
             overlay.classList.add("active");
             document.body.style.overflow = "hidden";
-            playBellChime();
+            soundEnabled = true;
+            // Play the sacred Om Namah Shivaya sound
+            startDeepOmChant();
             if (window.diwaliCanvasEngine) {
                 window.diwaliCanvasEngine.start();
                 // Launch initial celebratory barrage
@@ -557,6 +788,7 @@
         if (overlay) {
             overlay.classList.remove("active");
             document.body.style.overflow = "";
+            stopDeepOmChant();
             if (window.diwaliCanvasEngine) {
                 window.diwaliCanvasEngine.stop();
             }
@@ -902,21 +1134,41 @@
             }
         });
 
-        if (soundBtn) {
-            soundBtn.addEventListener("click", () => {
+        const soundToggle = document.getElementById("diwaliSoundToggle");
+        if (soundToggle) {
+            soundToggle.addEventListener("click", () => {
                 soundEnabled = !soundEnabled;
                 if (soundEnabled) {
-                    soundLabel.textContent = "Sound";
-                    soundIcon.textContent = "🔔";
-                    soundBtn.classList.add("playing");
-                    playBellChime();
+                    soundToggle.textContent = "🔊";
+                    soundToggle.classList.remove("muted");
+                    startDeepOmChant();
+                    speakPrayerWhisper();
                 } else {
-                    soundLabel.textContent = "Mute";
-                    soundIcon.textContent = "🔕";
-                    soundBtn.classList.remove("playing");
+                    soundToggle.textContent = "🔇";
+                    soundToggle.classList.add("muted");
+                    stopDeepOmChant();
                 }
             });
         }
+
+        // Auto unlock and start sacred Om Namah Shivaya chanting on first gesture
+        const unlockAudioOnGesture = () => {
+            soundEnabled = true;
+            const ctx = getAudioContext();
+            if (ctx && ctx.state === "suspended") {
+                ctx.resume().then(() => {
+                    if (!isChanting) startDeepOmChant();
+                }).catch(() => {
+                    if (!isChanting) startDeepOmChant();
+                });
+            } else {
+                if (!isChanting) startDeepOmChant();
+            }
+            window.removeEventListener("pointerdown", unlockAudioOnGesture);
+            window.removeEventListener("keydown", unlockAudioOnGesture);
+        };
+        window.addEventListener("pointerdown", unlockAudioOnGesture, { once: true });
+        window.addEventListener("keydown", unlockAudioOnGesture, { once: true });
 
         if (btnBurst) {
             btnBurst.addEventListener("click", () => {
