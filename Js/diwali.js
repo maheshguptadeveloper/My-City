@@ -666,12 +666,14 @@
                     </div>
                 </div>
 
-                <!-- Sacred Divine Altar: Lord Ganesha, Flaming Diya, Maa Lakshmi -->
+                <!-- Sacred Divine Altar: Real Authentic Lord Ganesha, Flaming Diya, Maa Lakshmi with Animated Coins -->
                 <div class="diwali-puja-altar">
                     <!-- Lord Ganesha (Left) -->
-                    <div class="diwali-deity-card" id="ganeshaCard" title="भगवान श्री गणेश (Click for blessings)">
+                    <div class="diwali-deity-card ganesha" id="ganeshaCard" title="भगवान श्री गणेश (Click for blessings)">
                         <div class="diwali-deity-halo"></div>
-                        ${SVG_GANESHA}
+                        <div class="diwali-deity-img-wrapper">
+                            <img src="../Images/ganesha.png" alt="भगवान श्री गणेश" class="diwali-deity-img ganesha-img" loading="eager" />
+                        </div>
                         <span class="diwali-deity-caption">श्री गणेश · सिद्धि</span>
                     </div>
 
@@ -686,9 +688,29 @@
                     </div>
 
                     <!-- Maa Lakshmi (Right) -->
-                    <div class="diwali-deity-card" id="lakshmiCard" title="माँ महालक्ष्मी (Click for blessings)">
+                    <div class="diwali-deity-card lakshmi" id="lakshmiCard" title="माँ महालक्ष्मी (Click for Dhan Varsha / धन वर्षा)">
                         <div class="diwali-deity-halo"></div>
-                        ${SVG_LAKSHMI}
+                        <div class="diwali-deity-img-wrapper">
+                            <img src="../Images/lakshmi.png" alt="माँ महालक्ष्मी" class="diwali-deity-img lakshmi-img" loading="eager" />
+
+                            <!-- Continuous Animated Cascading Gold Coins Flowing from Kalash -->
+                            <div class="diwali-coin-stream-container" id="lakshmiCoinStream" aria-hidden="true">
+                                <div class="diwali-anim-coin c1"><div class="coin-inner"><span class="coin-om">ॐ</span></div></div>
+                                <div class="diwali-anim-coin c2"><div class="coin-inner"><span class="coin-om">ॐ</span></div></div>
+                                <div class="diwali-anim-coin c3"><div class="coin-inner"><span class="coin-om">ॐ</span></div></div>
+                                <div class="diwali-anim-coin c4"><div class="coin-inner"><span class="coin-om">ॐ</span></div></div>
+                                <div class="diwali-anim-coin c5"><div class="coin-inner"><span class="coin-om">ॐ</span></div></div>
+                                <div class="diwali-anim-coin c6"><div class="coin-inner"><span class="coin-om">ॐ</span></div></div>
+                                <div class="diwali-anim-coin c7"><div class="coin-inner"><span class="coin-om">ॐ</span></div></div>
+                                <div class="diwali-anim-coin c8"><div class="coin-inner"><span class="coin-om">ॐ</span></div></div>
+
+                                <!-- Golden Dish Radiant Glow & Twinkling Glints -->
+                                <div class="coin-heap-glow"></div>
+                                <span class="coin-glint glint-1">✦</span>
+                                <span class="coin-glint glint-2">✨</span>
+                                <span class="coin-glint glint-3">✦</span>
+                            </div>
+                        </div>
                         <span class="diwali-deity-caption">माँ लक्ष्मी · समृद्धि</span>
                     </div>
                 </div>
@@ -1205,11 +1227,32 @@
             });
         }
 
-        // Maa Lakshmi Click
+        // Interactive Dhan Varsha Coin Shower Function
+        function spawnCoinShower() {
+            const stream = document.getElementById("lakshmiCoinStream");
+            if (!stream) return;
+
+            for (let i = 0; i < 9; i++) {
+                setTimeout(() => {
+                    const extraCoin = document.createElement("div");
+                    extraCoin.className = "diwali-anim-coin interactive-burst";
+                    extraCoin.innerHTML = '<div class="coin-inner"><span class="coin-om">ॐ</span></div>';
+                    stream.appendChild(extraCoin);
+
+                    setTimeout(() => {
+                        extraCoin.remove();
+                    }, 1700);
+                }, i * 90);
+            }
+        }
+
+        // Maa Lakshmi Click (Triggers Dhan Varsha Coin Shower!)
         const lakshmiCard = document.getElementById("lakshmiCard");
         if (lakshmiCard) {
             lakshmiCard.addEventListener("click", () => {
                 playBellChime();
+                speakPrayerWhisper();
+                spawnCoinShower();
                 if (window.diwaliCanvasEngine) {
                     const rect = lakshmiCard.getBoundingClientRect();
                     window.diwaliCanvasEngine.createBurstAt(rect.left + rect.width / 2, rect.top + rect.height / 2);
