@@ -1,0 +1,9 @@
+.git
+.git/**
+.vscode
+.vscode/**
+.github
+.github/**
+server.js
+wrangler.jsonc
+*.md
