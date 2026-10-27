@@ -615,22 +615,6 @@
                 ${SVG_LANTERN}
             </div>
 
-            <!-- Full-Screen Falling Gold Coins with Hindi Shubh Labh from Top -->
-            <div class="diwali-fullscreen-coins-layer" aria-hidden="true">
-                <div class="falling-shubh-labh-coin coin-screen coin-lg c-fs-1"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen c-fs-2"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen coin-sm c-fs-3"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen coin-lg c-fs-4"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen c-fs-5"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen coin-lg c-fs-6"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen coin-sm c-fs-7"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen c-fs-8"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen coin-lg c-fs-9"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen c-fs-10"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen coin-sm c-fs-11"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                <div class="falling-shubh-labh-coin coin-screen coin-lg c-fs-12"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-            </div>
-
             <!-- Main Festive Greeting Card -->
             <div class="diwali-card" id="diwaliCard">
                 <!-- Animated Sacred Om (ॐ) Marquee Border Running on All 4 Sides -->
@@ -684,18 +668,12 @@
 
                 <!-- Continuous Falling Gold Coins with Hindi Shubh Labh from Up inside Card -->
                 <div class="diwali-falling-coins-layer" id="diwaliFallingCoinsLayer" aria-hidden="true">
-                    <div class="falling-shubh-labh-coin coin-card coin-lg c-fall-1"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card c-fall-2"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card coin-sm c-fall-3"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card coin-lg c-fall-4"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card c-fall-5"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card coin-lg c-fall-6"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card coin-sm c-fall-7"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card c-fall-8"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card coin-lg c-fall-9"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card c-fall-10"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card coin-sm c-fall-11"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
-                    <div class="falling-shubh-labh-coin coin-card coin-lg c-fall-12"><div class="coin-flipper wobble"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div></div></div>
+                    <div class="falling-shubh-labh-coin c-fall-1"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
+                    <div class="falling-shubh-labh-coin c-fall-2"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
+                    <div class="falling-shubh-labh-coin c-fall-3"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
+                    <div class="falling-shubh-labh-coin c-fall-4"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
+                    <div class="falling-shubh-labh-coin c-fall-5"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
+                    <div class="falling-shubh-labh-coin c-fall-6"><div class="coin-flipper"><div class="coin-face coin-front"><span class="coin-inner-ring"></span><span class="coin-hindi">शुभ</span></div><div class="coin-face coin-back"><span class="coin-inner-ring"></span><span class="coin-hindi">लाभ</span></div></div></div>
                 </div>
 
                 <!-- Sacred Divine Altar: Real Authentic Lord Ganesha, Flaming Diya, Maa Lakshmi with Animated Coins -->
@@ -1261,28 +1239,26 @@
             });
         }
 
-        // Interactive Dhan Varsha Coin Shower Function (Falls from up with Shubh Labh)
+        // Interactive Dhan Varsha Coin Shower Function (Falls slowly from up with flipping Shubh & Labh)
         function spawnCoinShower() {
             const layer = document.getElementById("diwaliFallingCoinsLayer");
             if (!layer) return;
 
-            for (let i = 0; i < 18; i++) {
+            for (let i = 0; i < 8; i++) {
                 setTimeout(() => {
                     const coin = document.createElement("div");
-                    const sizeClass = i % 3 === 0 ? "coin-lg" : (i % 3 === 1 ? "" : "coin-sm");
-                    coin.className = `falling-shubh-labh-coin burst-rain ${sizeClass}`;
-                    coin.style.left = (6 + Math.random() * 88) + "%";
-                    coin.style.animationDuration = (2.2 + Math.random() * 1.5) + "s";
-                    const isShubh = i % 2 === 0;
+                    coin.className = "falling-shubh-labh-coin burst-rain";
+                    coin.style.left = (8 + Math.random() * 84) + "%";
+                    coin.style.animationDuration = (5.5 + Math.random() * 1.5) + "s";
                     coin.innerHTML = `
-                        <div class="coin-flipper ${i % 2 === 1 ? "wobble" : ""}">
+                        <div class="coin-flipper">
                             <div class="coin-face coin-front">
                                 <span class="coin-inner-ring"></span>
-                                <span class="coin-hindi">${isShubh ? "शुभ" : "लाभ"}</span>
+                                <span class="coin-hindi">शुभ</span>
                             </div>
                             <div class="coin-face coin-back">
                                 <span class="coin-inner-ring"></span>
-                                <span class="coin-hindi">${isShubh ? "लाभ" : "शुभ"}</span>
+                                <span class="coin-hindi">लाभ</span>
                             </div>
                         </div>
                     `;
@@ -1290,8 +1266,8 @@
 
                     setTimeout(() => {
                         coin.remove();
-                    }, 4000);
-                }, i * 110);
+                    }, 7500);
+                }, i * 180);
             }
         }
 

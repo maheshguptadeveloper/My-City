@@ -681,15 +681,8 @@
 
 /* ========================================================
    CONTINUOUS FALLING GOLD COINS FROM UP WITH HINDI SHUBH & LABH
+   (Slow, graceful, perfectly flipping between 'शुभ' and 'लाभ')
    ======================================================== */
-.diwali-fullscreen-coins-layer {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 99998;
-}
-
 .diwali-falling-coins-layer {
     position: absolute;
     inset: 0;
@@ -701,77 +694,46 @@
 
 .falling-shubh-labh-coin {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    perspective: 600px;
+    width: 34px;
+    height: 34px;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
     pointer-events: none;
+    animation: coinFallFromTop 7.6s cubic-bezier(0.35, 0, 0.65, 1) infinite;
 }
 
-.falling-shubh-labh-coin.coin-card {
-    animation: coinFallFromTop 3.8s cubic-bezier(0.38, 0, 0.62, 1) infinite;
+/* Staggered positions & slow gentle delays across the card */
+.falling-shubh-labh-coin.c-fall-1 { left: 8%;  animation-delay: 0s;    animation-duration: 7.2s; }
+.falling-shubh-labh-coin.c-fall-2 { left: 24%; animation-delay: 2.2s;  animation-duration: 7.8s; }
+.falling-shubh-labh-coin.c-fall-3 { left: 40%; animation-delay: 4.5s;  animation-duration: 7.4s; }
+.falling-shubh-labh-coin.c-fall-4 { left: 56%; animation-delay: 1.0s;  animation-duration: 8.2s; }
+.falling-shubh-labh-coin.c-fall-5 { left: 72%; animation-delay: 3.4s;  animation-duration: 7.6s; }
+.falling-shubh-labh-coin.c-fall-6 { left: 88%; animation-delay: 5.6s;  animation-duration: 8.0s; }
+
+/* Interactive Extra Burst Rain (falls slowly and flips) */
+.falling-shubh-labh-coin.burst-rain {
+    animation: coinFallFromTop 5.8s cubic-bezier(0.25, 0.8, 0.45, 1) forwards;
 }
 
-.falling-shubh-labh-coin.coin-screen {
-    animation: coinFallScreenFromTop 5.2s cubic-bezier(0.38, 0, 0.62, 1) infinite;
-}
-
-.falling-shubh-labh-coin.coin-lg {
-    width: 36px;
-    height: 36px;
-}
-
-.falling-shubh-labh-coin.coin-sm {
-    width: 24px;
-    height: 24px;
-}
-
-/* Fall Delays & Positions for In-Card Coins (Cascading Down From Up) */
-.falling-shubh-labh-coin.c-fall-1  { left: 6%;  animation-delay: 0s;    animation-duration: 3.5s; }
-.falling-shubh-labh-coin.c-fall-2  { left: 15%; animation-delay: 1.4s;  animation-duration: 4.1s; }
-.falling-shubh-labh-coin.c-fall-3  { left: 24%; animation-delay: 0.6s;  animation-duration: 3.7s; }
-.falling-shubh-labh-coin.c-fall-4  { left: 34%; animation-delay: 2.2s;  animation-duration: 4.3s; }
-.falling-shubh-labh-coin.c-fall-5  { left: 45%; animation-delay: 1.0s;  animation-duration: 3.6s; }
-.falling-shubh-labh-coin.c-fall-6  { left: 55%; animation-delay: 0.3s;  animation-duration: 3.4s; }
-.falling-shubh-labh-coin.c-fall-7  { left: 66%; animation-delay: 1.8s;  animation-duration: 3.9s; }
-.falling-shubh-labh-coin.c-fall-8  { left: 76%; animation-delay: 2.7s;  animation-duration: 4.0s; }
-.falling-shubh-labh-coin.c-fall-9  { left: 85%; animation-delay: 3.1s;  animation-duration: 3.8s; }
-.falling-shubh-labh-coin.c-fall-10 { left: 93%; animation-delay: 0.9s;  animation-duration: 3.5s; }
-.falling-shubh-labh-coin.c-fall-11 { left: 20%; animation-delay: 2.5s;  animation-duration: 4.2s; }
-.falling-shubh-labh-coin.c-fall-12 { left: 70%; animation-delay: 1.2s;  animation-duration: 3.6s; }
-
-/* Fall Delays & Positions for Fullscreen Coins (Cascading Down Across Entire Screen) */
-.falling-shubh-labh-coin.c-fs-1  { left: 3%;  animation-delay: 0.2s; animation-duration: 4.8s; }
-.falling-shubh-labh-coin.c-fs-2  { left: 11%; animation-delay: 1.6s; animation-duration: 5.4s; }
-.falling-shubh-labh-coin.c-fs-3  { left: 21%; animation-delay: 0.8s; animation-duration: 5.0s; }
-.falling-shubh-labh-coin.c-fs-4  { left: 31%; animation-delay: 2.5s; animation-duration: 5.6s; }
-.falling-shubh-labh-coin.c-fs-5  { left: 42%; animation-delay: 1.1s; animation-duration: 4.9s; }
-.falling-shubh-labh-coin.c-fs-6  { left: 52%; animation-delay: 0.4s; animation-duration: 5.2s; }
-.falling-shubh-labh-coin.c-fs-7  { left: 63%; animation-delay: 2.1s; animation-duration: 5.5s; }
-.falling-shubh-labh-coin.c-fs-8  { left: 74%; animation-delay: 3.0s; animation-duration: 5.1s; }
-.falling-shubh-labh-coin.c-fs-9  { left: 83%; animation-delay: 1.5s; animation-duration: 4.7s; }
-.falling-shubh-labh-coin.c-fs-10 { left: 91%; animation-delay: 3.4s; animation-duration: 5.3s; }
-.falling-shubh-labh-coin.c-fs-11 { left: 17%; animation-delay: 2.8s; animation-duration: 5.7s; }
-.falling-shubh-labh-coin.c-fs-12 { left: 88%; animation-delay: 0.7s; animation-duration: 4.6s; }
-
-/* Keyframes: Gentle Natural Flutter Down from Up inside Card */
+/* Keyframes: Slow Majestic Gentle Drift Down From Up */
 @keyframes coinFallFromTop {
     0% {
-        top: -45px;
+        top: -50px;
         opacity: 0;
-        transform: translateX(0) scale(0.75);
+        transform: translateX(0) scale(0.85);
     }
 
-    8% {
+    6% {
         opacity: 1;
-        transform: translateX(10px) scale(1);
+        transform: translateX(8px) scale(1);
     }
 
-    32% {
-        transform: translateX(-14px) scale(1.02);
+    30% {
+        transform: translateX(-12px) scale(1.02);
     }
 
-    58% {
-        transform: translateX(12px) scale(0.98);
+    55% {
+        transform: translateX(10px) scale(0.98);
     }
 
     82% {
@@ -786,63 +748,30 @@
     }
 }
 
-/* Keyframes: Gentle Natural Flutter Down from Up across Fullscreen */
-@keyframes coinFallScreenFromTop {
-    0% {
-        top: -50px;
-        opacity: 0;
-        transform: translateX(0) scale(0.8);
-    }
-
-    6% {
-        opacity: 0.95;
-        transform: translateX(12px) scale(1);
-    }
-
-    30% {
-        transform: translateX(-16px) scale(1.02);
-    }
-
-    55% {
-        transform: translateX(14px) scale(0.98);
-    }
-
-    80% {
-        transform: translateX(-10px) scale(1);
-        opacity: 0.95;
-    }
-
-    100% {
-        top: 105vh;
-        opacity: 0;
-        transform: translateX(8px) scale(0.85);
-    }
-}
-
-/* Interactive Extra Burst Rain */
-.falling-shubh-labh-coin.burst-rain {
-    animation: coinFallFromTop 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* Double-Sided 3D Realistic Minted Gold Coins with Hindi 'शुभ' and 'लाभ' */
+/* 3D Realistic Minted Gold Coin Flipper (Flips between 'शुभ' and 'लाभ') */
 .coin-flipper {
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    animation: coinSpin3DFull 3.2s ease-in-out infinite;
+    -webkit-transform-style: preserve-3d;
+    animation: coinSpinFlip 3.0s ease-in-out infinite;
 }
 
-.coin-flipper.wobble {
-    animation: coinWobble3D 2.2s ease-in-out infinite alternate;
-}
+/* Alternate stagger flip delays so coins flip at different natural intervals */
+.falling-shubh-labh-coin.c-fall-1 .coin-flipper { animation-delay: 0s; }
+.falling-shubh-labh-coin.c-fall-2 .coin-flipper { animation-delay: 0.6s; }
+.falling-shubh-labh-coin.c-fall-3 .coin-flipper { animation-delay: 1.2s; }
+.falling-shubh-labh-coin.c-fall-4 .coin-flipper { animation-delay: 1.8s; }
+.falling-shubh-labh-coin.c-fall-5 .coin-flipper { animation-delay: 2.4s; }
+.falling-shubh-labh-coin.c-fall-6 .coin-flipper { animation-delay: 0.9s; }
 
 .coin-face {
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -864,69 +793,83 @@
 
 .coin-front {
     transform: rotateY(0deg);
+    animation: faceFrontSwap 3.0s ease-in-out infinite;
 }
 
 .coin-back {
     transform: rotateY(180deg);
+    animation: faceBackSwap 3.0s ease-in-out infinite;
 }
+
+.falling-shubh-labh-coin.c-fall-1 .coin-front,
+.falling-shubh-labh-coin.c-fall-1 .coin-back { animation-delay: 0s; }
+.falling-shubh-labh-coin.c-fall-2 .coin-front,
+.falling-shubh-labh-coin.c-fall-2 .coin-back { animation-delay: 0.6s; }
+.falling-shubh-labh-coin.c-fall-3 .coin-front,
+.falling-shubh-labh-coin.c-fall-3 .coin-back { animation-delay: 1.2s; }
+.falling-shubh-labh-coin.c-fall-4 .coin-front,
+.falling-shubh-labh-coin.c-fall-4 .coin-back { animation-delay: 1.8s; }
+.falling-shubh-labh-coin.c-fall-5 .coin-front,
+.falling-shubh-labh-coin.c-fall-5 .coin-back { animation-delay: 2.4s; }
+.falling-shubh-labh-coin.c-fall-6 .coin-front,
+.falling-shubh-labh-coin.c-fall-6 .coin-back { animation-delay: 0.9s; }
 
 .coin-hindi {
     font-family: 'Noto Sans Devanagari', 'Mangal', 'Poppins', -apple-system, sans-serif;
-    font-size: 13px;
+    font-size: 14.5px;
     font-weight: 900;
-    color: #3e1200;
+    color: #3b1100;
     line-height: 1;
-    text-shadow: 0 0.8px 1px rgba(255, 255, 255, 0.95), 0 -0.5px 0.5px rgba(50, 15, 0, 0.4);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.95), 0 -0.5px 0.5px rgba(50, 15, 0, 0.45);
     letter-spacing: 0.3px;
-    z-index: 2;
     transform: translateY(-0.5px);
-}
-
-.coin-lg .coin-hindi {
-    font-size: 15.5px;
-}
-
-.coin-sm .coin-hindi {
-    font-size: 10.5px;
 }
 
 .diwali-anim-coin .coin-hindi {
     font-size: 8.5px;
 }
 
-@keyframes coinSpin3DFull {
-    0% {
+/* 3D Coin Rotation with Pauses on Shubh and Labh */
+@keyframes coinSpinFlip {
+    0%, 32% {
         transform: rotateY(0deg) rotateZ(-3deg);
     }
-
-    25% {
-        transform: rotateY(90deg) rotateZ(0deg);
-    }
-
-    50% {
+    48%, 80% {
         transform: rotateY(180deg) rotateZ(3deg);
     }
-
-    75% {
-        transform: rotateY(270deg) rotateZ(0deg);
-    }
-
-    100% {
+    98%, 100% {
         transform: rotateY(360deg) rotateZ(-3deg);
     }
 }
 
-@keyframes coinWobble3D {
-    0% {
-        transform: rotateY(-22deg) rotateZ(-4deg);
+/* Synchronized Swap to Guarantee Crisp Display of 'शुभ' on front and 'लाभ' on back */
+@keyframes faceFrontSwap {
+    0%, 39% {
+        opacity: 1;
+        visibility: visible;
     }
-
-    50% {
-        transform: rotateY(0deg) rotateZ(0deg);
+    40%, 89% {
+        opacity: 0;
+        visibility: hidden;
     }
+    90%, 100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
 
-    100% {
-        transform: rotateY(22deg) rotateZ(4deg);
+@keyframes faceBackSwap {
+    0%, 39% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    40%, 89% {
+        opacity: 1;
+        visibility: visible;
+    }
+    90%, 100% {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -1597,30 +1540,12 @@
     }
 
     .falling-shubh-labh-coin {
-        width: 24px;
-        height: 24px;
-    }
-
-    .falling-shubh-labh-coin.coin-lg {
-        width: 29px;
-        height: 29px;
-    }
-
-    .falling-shubh-labh-coin.coin-sm {
-        width: 20px;
-        height: 20px;
+        width: 27px;
+        height: 27px;
     }
 
     .falling-shubh-labh-coin .coin-hindi {
-        font-size: 10.5px;
-    }
-
-    .falling-shubh-labh-coin.coin-lg .coin-hindi {
-        font-size: 12.5px;
-    }
-
-    .falling-shubh-labh-coin.coin-sm .coin-hindi {
-        font-size: 8.5px;
+        font-size: 11.5px;
     }
 
     .diwali-anim-coin {
